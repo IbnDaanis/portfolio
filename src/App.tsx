@@ -6,6 +6,11 @@ export const App = (): JSX.Element => {
     const timer = setTimeout(() => setCount(count + 1), 1000)
     return () => clearTimeout(timer)
   }, [count, setCount])
+
+  useEffect(() => {
+    console.clear()
+  }, [])
+
   return (
     <div className='App'>
       <header className='App-header'>
