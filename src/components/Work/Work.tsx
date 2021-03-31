@@ -20,10 +20,8 @@ export const Work = (): JSX.Element => {
                 JS, MongoDB and Express. Many hours was spent building the backend using and pairing
                 that with a user-friendly font-end. A simple and professional design thanks to React
                 Bootstrap and my own CSS.{' '}
-                <a href='https://github.com/IbnDaanis/ultrastore' rel='noreferrer' target='_blank'>
-                  <GithubIcon />
-                </a>
               </p>
+
               <h4 className='project-details-features'>Features Include:</h4>
               <div className='project-details-features-lists'>
                 <ul className='list'>
@@ -39,6 +37,12 @@ export const Work = (): JSX.Element => {
                   <li>- Admin Controls</li>
                 </ul>
               </div>
+              <p className='github'>
+                <a href='https://github.com/IbnDaanis/ultrastore' rel='noreferrer' target='_blank'>
+                  <span>Link to Repo</span>
+                  <GithubIcon />
+                </a>
+              </p>
             </div>
             <div className='project-image'>
               <a

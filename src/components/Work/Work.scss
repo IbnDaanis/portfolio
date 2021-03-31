@@ -125,6 +125,7 @@
           flex-direction: column;
           justify-content: space-between;
           position: relative;
+          margin-bottom: 2rem;
 
           .arrow-container {
             position: absolute;
@@ -143,6 +144,7 @@
 
             .arrow {
               height: 100px;
+              color: #ffd4e2;
             }
           }
 
@@ -161,30 +163,58 @@
             font-size: 5rem;
             font-weight: 600;
             margin-bottom: 2rem;
+            color: #ffd4e2;
           }
 
           &-description {
             font-size: 1.1rem;
             line-height: 1.8rem;
             font-weight: 300;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             max-width: 700px;
             width: 95%;
+          }
 
+          .github {
             a {
-              fill: #ef48a1;
+              display: flex;
+              align-items: center;
+              fill: #ffd4e2;
+
+              span {
+                margin-right: 0.5rem;
+                font-size: 1.2rem;
+                font-weight: 300;
+                color: #ffd4e2;
+                text-transform: uppercase;
+                transition: 0.4s ease-in-out 0.2s;
+              }
+
+              svg {
+                transition: 0.4s ease-in-out;
+              }
+
+              &:hover {
+                span {
+                  color: white;
+                }
+                svg {
+                  transform: scale(1.2);
+                }
+              }
             }
           }
 
           &-features {
-            font-size: 2rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            color: #ffd4e2;
+            font-weight: 300;
+            margin-bottom: 0.75rem;
           }
 
           &-features-lists {
             display: flex;
-            margin-bottom: 3.5rem;
+            margin-bottom: 2rem;
 
             @media (max-width: 530px) {
               justify-content: space-between;
