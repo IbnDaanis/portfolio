@@ -33,28 +33,28 @@
 
     h2 {
       font-weight: 400;
-      font-size: 5em;
+      font-size: 6rem;
       line-height: 1.5em;
-      color: rgb(255, 238, 233);
+      color: #ffd4e2;
       margin: 18rem 0;
 
       @media (max-width: 1500px) {
-        font-size: 4.5em;
+        font-size: 5.5em;
       }
 
       @media (max-width: 1310px) {
-        font-size: 4em;
+        font-size: 5em;
       }
 
       @media (max-width: 1200px) {
         font-size: 3.7em;
       }
 
-      @media (max-width: 805px) {
+      @media (max-width: 835px) {
         font-size: 3em;
       }
 
-      @media (max-width: 660px) {
+      @media (max-width: 680px) {
         font-size: 2.5em;
       }
 
@@ -69,6 +69,7 @@
     .work-heading {
       margin: 15rem auto 15rem;
       text-align: center;
+      font-weight: 600;
       @media (max-width: 1200px) {
         margin: 5rem auto 5rem;
         text-align: left;
@@ -81,31 +82,31 @@
       .project {
         display: flex;
         padding-bottom: 5rem;
+        flex-direction: column;
         @media (max-width: 1200px) {
-          flex-direction: column;
           border-bottom: 1px solid rgb(37, 37, 37);
           padding-bottom: 2rem;
         }
 
         &-image {
-          width: 55%;
           overflow: hidden;
           display: flex;
+          justify-content: flex-end;
           align-items: flex-start;
-          height: 450px;
-          border-radius: 5px;
+          height: calc(100vw / 16 * 10);
           @media (max-width: 1200px) {
-            width: 100%;
-            height: calc(100vw / 16 * 10);
-
             order: 2;
           }
 
-          img {
-            cursor: pointer;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+          a {
+            width: 60%;
+            img {
+              cursor: pointer;
+              border-radius: 5px;
+              pointer-events: none;
+              width: 100%;
+              height: 100%;
+            }
           }
         }
 
@@ -127,12 +128,8 @@
           }
 
           &-title {
-            font-size: 4rem;
-            font-weight: 500;
-            background: -webkit-linear-gradient(#a52268, #75184a);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 5rem;
+            font-weight: 600;
             margin-bottom: 2rem;
           }
 
@@ -141,9 +138,9 @@
             line-height: 1.8rem;
             font-weight: 300;
             margin-bottom: 2rem;
-            max-width: 800px;
+            max-width: 700px;
             width: 95%;
-            color: var(--text-color);
+
             a {
               fill: #ef48a1;
             }
@@ -151,9 +148,8 @@
 
           &-features {
             font-size: 2rem;
-            font-weight: 400;
+            font-weight: 500;
             margin-bottom: 1rem;
-            color: var(--main-color);
           }
 
           &-features-lists {
@@ -177,8 +173,8 @@
               }
 
               li {
-                font-weight: 300;
-                color: var(--text-color);
+                font-weight: 400;
+                color: rgb(230, 230, 230);
               }
             }
           }

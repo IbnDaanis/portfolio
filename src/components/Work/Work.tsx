@@ -11,12 +11,12 @@ export const Work = (): JSX.Element => {
         <div className='projects'>
           <article className='project'>
             <div className='project-details'>
-              <h3 className='project-details title'>UltraStore</h3>
+              <h3 className='project-details-title'>UltraStore</h3>
               <p className='project-details-description'>
                 This is my first big project. It&#29;s an E-commerce store build with React, Node
                 JS, MongoDB and Express. Many hours was spent building the backend using and pairing
-                that with a user-friendly font-end with a simple and professional design thanks to
-                React Bootstrap and my own CSS.{' '}
+                that with a user-friendly font-end. A simple and professional design thanks to React
+                Bootstrap and my own CSS.{' '}
                 <a href='https://github.com/IbnDaanis/ultrastore' rel='noreferrer' target='_blank'>
                   <GithubIcon />
                 </a>
@@ -48,7 +48,7 @@ export const Work = (): JSX.Element => {
               </a>
             </div>
           </article>
-          <article className='project'>
+          {/* <article className='project'>
             <div className='project-image'>
               <a
                 href='https://ibndaanis-shopping-cart.netlify.app/'
@@ -89,7 +89,7 @@ export const Work = (): JSX.Element => {
                 </ul>
               </div>
             </div>
-          </article>
+          </article> */}
         </div>
       </div>
     </section>
