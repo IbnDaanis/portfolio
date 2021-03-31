@@ -1,5 +1,5 @@
 import React from 'react'
-import { UltraStore, GithubIcon, Friedrik } from '../assets'
+import { UltraStore, GithubIcon, Friedrik, ArrowIcon } from '../assets'
 
 import './Work.scss'
 
@@ -11,6 +11,9 @@ export const Work = (): JSX.Element => {
         <div className='projects'>
           <article className='project'>
             <div className='project-details'>
+              <div className='arrow-container'>
+                <ArrowIcon className={'arrow'} />
+              </div>
               <h3 className='project-details-title'>UltraStore</h3>
               <p className='project-details-description'>
                 This is my first big project. It&#29;s an E-commerce store build with React, Node
