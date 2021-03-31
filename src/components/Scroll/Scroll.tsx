@@ -14,7 +14,7 @@ export const Scroll = ({ children }: { children: JSX.Element[] }): JSX.Element =
 
   useEffect((): void => {
     setBodyHeight()
-  }, [size.height])
+  }, [size])
 
   const data = useMemo(
     () => ({
@@ -40,7 +40,7 @@ export const Scroll = ({ children }: { children: JSX.Element[] }): JSX.Element =
       scrollContainer.current.style.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`
 
     requestAnimationFrame(() => skewScrolling())
-  }, [data, size.width])
+  }, [data, size])
 
   useEffect(() => {
     requestAnimationFrame(() => skewScrolling())

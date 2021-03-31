@@ -1,0 +1,189 @@
+:root {
+  --main-color: #fafafa;
+  --secondary-color: #34a1cd;
+  --text-color: #55527c;
+  --gradient-1: #ed9550;
+  --gradient-2: #c36d89;
+  --dark-maroon: #4c1030;
+}
+
+.work {
+  .container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 95%;
+    width: 1440px;
+    margin: 0 auto;
+
+    h1 {
+      font-weight: 500;
+      font-size: 10em;
+      width: 100%;
+
+      span {
+        background: -webkit-linear-gradient(#ed9550, #c36d89);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 5em;
+      line-height: 1.5em;
+      color: rgb(255, 238, 233);
+      margin: 18rem 0;
+
+      @media (max-width: 1500px) {
+        font-size: 4.5em;
+      }
+
+      @media (max-width: 1310px) {
+        font-size: 4em;
+      }
+
+      @media (max-width: 1200px) {
+        font-size: 3.7em;
+      }
+
+      @media (max-width: 805px) {
+        font-size: 3em;
+      }
+
+      @media (max-width: 660px) {
+        font-size: 2.5em;
+      }
+
+      span {
+        background: -webkit-linear-gradient(#ed9550, #c36d89);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .work-heading {
+      margin: 15rem auto 15rem;
+      text-align: center;
+      @media (max-width: 1200px) {
+        margin: 5rem auto 5rem;
+        text-align: left;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgb(37, 37, 37);
+      }
+    }
+
+    .projects {
+      .project {
+        display: flex;
+        padding-bottom: 5rem;
+        @media (max-width: 1200px) {
+          flex-direction: column;
+          border-bottom: 1px solid rgb(37, 37, 37);
+          padding-bottom: 2rem;
+        }
+
+        &-image {
+          width: 55%;
+          overflow: hidden;
+          display: flex;
+          align-items: flex-start;
+          height: 450px;
+          border-radius: 5px;
+          @media (max-width: 1200px) {
+            width: 100%;
+            height: calc(100vw / 16 * 10);
+
+            order: 2;
+          }
+
+          img {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &-details {
+          width: 45%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          &.right {
+            padding-left: 2rem;
+            @media (max-width: 1200px) {
+              padding-left: 0;
+            }
+          }
+          @media (max-width: 1200px) {
+            margin-top: 3rem;
+            width: 100%;
+          }
+
+          &-title {
+            font-size: 4rem;
+            font-weight: 500;
+            background: -webkit-linear-gradient(#a52268, #75184a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2rem;
+          }
+
+          &-description {
+            font-size: 1.1rem;
+            line-height: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            width: 95%;
+            color: var(--text-color);
+            a {
+              fill: #ef48a1;
+            }
+          }
+
+          &-features {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: var(--main-color);
+          }
+
+          &-features-lists {
+            display: flex;
+            margin-bottom: 3.5rem;
+
+            @media (max-width: 530px) {
+              justify-content: space-between;
+              margin-bottom: 1rem;
+              flex-direction: column;
+            }
+
+            .list {
+              margin-right: 4.5rem;
+              &:nth-child(2) {
+                margin-right: 0;
+              }
+
+              @media (max-width: 530px) {
+                margin-right: 20px;
+              }
+
+              li {
+                font-weight: 300;
+                color: var(--text-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
