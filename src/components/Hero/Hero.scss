@@ -1,32 +1,100 @@
-.section {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  height: 100vh;
-  align-items: center;
-  max-width: 95%;
-  margin: 0 auto;
-
-  @media (max-width: 860px) {
-    flex-direction: column !important;
-  }
+:root {
+  --main-color: #fafafa;
+  --secondary-color: #34a1cd;
+  --text-color: #55527c;
+  --gradient-1: #ed9550;
+  --gradient-2: #c36d89;
 }
 
-.block {
-  width: 250px;
-  height: 250px;
-
-  background-color: peachpuff;
-}
-
-.container {
-  p {
-    width: 500px;
-    max-width: 95vw;
+.hero {
+  .container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 95%;
+    width: 1440px;
     margin: 0 auto;
-  }
-}
 
-p {
-  font-size: 1.5rem;
+    @media (max-width: 600px) {
+      min-height: 80vh;
+    }
+
+    h1 {
+      font-weight: 500;
+      font-size: 10em;
+      width: 100%;
+
+      span {
+        background: -webkit-linear-gradient(#ed9550, #c36d89);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @media (max-width: 1440px) {
+        font-size: 9em;
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 8em;
+      }
+
+      @media (max-width: 700px) {
+        font-size: 6em;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 5em;
+      }
+    }
+
+    h2 {
+      font-weight: 500;
+      font-size: 5em;
+      line-height: 1.5em;
+      width: fit-content;
+      color: rgb(255, 238, 233);
+
+      @media (max-width: 1500px) {
+        font-size: 4.5em;
+      }
+
+      @media (max-width: 1310px) {
+        font-size: 4em;
+      }
+
+      @media (max-width: 1200px) {
+        font-size: 3.7em;
+      }
+
+      @media (max-width: 805px) {
+        font-size: 3em;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 2em;
+      }
+
+      span {
+        background: -webkit-linear-gradient(#ed9550, #c36d89);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    svg {
+      display: inline;
+      position: absolute;
+      width: 30%;
+      bottom: 2rem;
+      right: 0;
+      z-index: -1;
+      pointer-events: none;
+      fill: rgb(25, 25, 25);
+    }
+  }
 }

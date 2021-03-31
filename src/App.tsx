@@ -6,11 +6,6 @@ export const App = (): JSX.Element => {
     <>
       <Scroll>
         <Hero />
-        <Hero />
-        <Hero />
-        <Hero />
-        <Hero />
-        <Hero />
       </Scroll>
     </>
   )
