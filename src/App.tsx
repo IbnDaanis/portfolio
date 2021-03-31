@@ -1,23 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { Hero, SmoothScroll } from './components'
 
 export const App = (): JSX.Element => {
-  const [count, setCount] = useState(0)
-  useEffect(() => {
-    const timer = setTimeout(() => setCount(count + 1), 1000)
-    return () => clearTimeout(timer)
-  }, [count, setCount])
-
-  useEffect(() => {
-    console.clear()
-  }, [])
-
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <p>
-          Okay Page has been open for <code>{count}</code> seconds.
-        </p>
-      </header>
+    <div className='parent'>
+      <SmoothScroll>
+        <h2>Smooth Scrolling</h2>
+        <Hero flexDirection='row' />
+        <Hero flexDirection='row-reverse' />
+        <Hero flexDirection='row' />
+        <Hero flexDirection='row-reverse' />
+        <Hero flexDirection='row' />
+        <Hero flexDirection='row-reverse' />
+      </SmoothScroll>
     </div>
   )
 }
