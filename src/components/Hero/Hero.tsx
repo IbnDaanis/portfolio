@@ -2,13 +2,9 @@ import React from 'react'
 
 import './Hero.scss'
 
-interface IHero {
-  flexDirection: any
-}
-
-export const Hero = ({ flexDirection }: IHero): JSX.Element => {
+export const Hero = (): JSX.Element => {
   return (
-    <div className='section' style={{ flexDirection }}>
+    <div className='section'>
       <div className='left-container'>
         <div className='block'></div>
       </div>
