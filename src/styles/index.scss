@@ -17,13 +17,11 @@ body {
   overscroll-behavior-y: none;
   background: rgb(107, 107, 107);
   position: relative;
-
-  /* Hide scrollbar for Chrome, Safari and Opera */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
   }
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 }
 
 a {
@@ -43,28 +41,4 @@ button {
 
 .hide {
   display: none !important;
-}
-
-h2 {
-  text-align: center;
-  position: fixed;
-  font-size: 4rem;
-  top: 0;
-  right: 0;
-  z-index: 10;
-}
-
-.app {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  pointer-events: none;
-
-  .scroll-container {
-    overflow-y: auto;
-    background: whitesmoke;
-  }
 }
