@@ -1,6 +1,6 @@
 import React from 'react'
-import { UltraStore, GithubIcon, Friedrik } from '../../assets'
-import { Arrow } from '../../components'
+import { Project } from '../../components/Project/Project'
+import { projects } from '../../data/projects'
 
 import './Work.scss'
 
@@ -10,56 +10,10 @@ export const Work = (): JSX.Element => {
       <div className='container'>
         <h2 className='work-heading'>Here&#39;s what I&#39;ve been up to...</h2>
         <div className='projects'>
-          <article className='project'>
-            <div className='project-details'>
-              <div className='project-details-container'>
-                <h3 className='project-details-title'>UltraStore</h3>
-                <p className='project-details-description'>
-                  This is my first big project. It&#29;s an E-commerce store build with React, Node
-                  JS, MongoDB and Express. Many hours was spent building the backend using and
-                  pairing that with a user-friendly font-end. A simple and professional design
-                  thanks to React Bootstrap and my own CSS.{' '}
-                </p>
+          {projects.map(project => (
+            <Project key={project.title} project={project} />
+          ))}
 
-                <h4 className='project-details-features'>Features Include:</h4>
-                <div className='project-details-features-lists'>
-                  <ul className='list'>
-                    <li>- Shopping Cart</li>
-                    <li>- PayPal Payment</li>
-                    <li>- Account Creation</li>
-                    <li>- User Reviews</li>
-                  </ul>
-                  <ul className='list'>
-                    <li>- Checkout Process</li>
-                    <li>- Add/Remove Products</li>
-                    <li>- Product Search</li>
-                    <li>- Admin Controls</li>
-                  </ul>
-                </div>
-                <p className='github'>
-                  <a
-                    href='https://github.com/IbnDaanis/ultrastore'
-                    rel='noreferrer'
-                    target='_blank'
-                  >
-                    <span>Link to Repo</span>
-                    <GithubIcon />
-                  </a>
-                </p>
-              </div>
-              <Arrow />
-            </div>
-            <div className='project-image'>
-              <a
-                href='#'
-                target='_blank'
-                rel='noreferrer'
-                title='Click to visit this project on a new tab'
-              >
-                <img src={UltraStore} alt='Project Image' />
-              </a>
-            </div>
-          </article>
           {/* <article className='project'>
             <div className='project-image'>
               <a
