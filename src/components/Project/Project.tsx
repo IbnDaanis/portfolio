@@ -1,4 +1,5 @@
 import React from 'react'
+import './Project.scss'
 import { GithubIcon } from '../../assets'
 import { IProject } from '../../data/projects'
 import { Arrow } from '../Arrow/Arrow'

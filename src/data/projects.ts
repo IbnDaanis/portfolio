@@ -1,5 +1,3 @@
-import { UltraStore } from '../assets'
-
 export interface IProject {
   title: string
   description1: string
@@ -8,7 +6,7 @@ export interface IProject {
   list2: string[]
   repo: string
   website: string
-  image: JSX.Element
+  image: string
 }
 
 export const projects: IProject[] = [
@@ -23,6 +21,19 @@ export const projects: IProject[] = [
     list2: ['Checkout Process', 'Add/Remove Products', 'Product Search', 'Admin Controls'],
     repo: 'https://github.com/IbnDaanis/ultrastore',
     website: '',
-    image: UltraStore,
+    image: '/dist/assets/images/ultrastore.png',
+  },
+  {
+    title: 'Friedrik',
+    description1: ` This project started with me practising React Hooks to make a functional shopping
+    cart. However, I got carried away, I tried to make it look very nice... Then I
+    decided to add animations to it to make it look more interesting. Framer Motion for
+    the animations and SCSS for styling.`,
+    description2: '',
+    list1: ['Shopping Cart', 'Individual Product Page', 'React Router', 'Framer Motion Animations'],
+    list2: ['Page Transitions', 'Dark mode if set on system', 'Layout Transitions'],
+    repo: 'https://github.com/IbnDaanis/shopping-cart',
+    website: 'https://ibndaanis-shopping-cart.netlify.app/',
+    image: '/dist/assets/images/friedrik.png',
   },
 ]
