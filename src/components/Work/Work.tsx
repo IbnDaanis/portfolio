@@ -1,5 +1,6 @@
 import React from 'react'
-import { UltraStore, GithubIcon, Friedrik, ArrowIcon } from '../assets'
+import { UltraStore, GithubIcon, Friedrik } from '../../assets'
+import { Arrow } from '../Arrow/Arrow'
 
 import './Work.scss'
 
@@ -11,38 +12,42 @@ export const Work = (): JSX.Element => {
         <div className='projects'>
           <article className='project'>
             <div className='project-details'>
-              <div className='arrow-container'>
-                <ArrowIcon className={'arrow'} />
-              </div>
-              <h3 className='project-details-title'>UltraStore</h3>
-              <p className='project-details-description'>
-                This is my first big project. It&#29;s an E-commerce store build with React, Node
-                JS, MongoDB and Express. Many hours was spent building the backend using and pairing
-                that with a user-friendly font-end. A simple and professional design thanks to React
-                Bootstrap and my own CSS.{' '}
-              </p>
+              <div className='project-details-container'>
+                <h3 className='project-details-title'>UltraStore</h3>
+                <p className='project-details-description'>
+                  This is my first big project. It&#29;s an E-commerce store build with React, Node
+                  JS, MongoDB and Express. Many hours was spent building the backend using and
+                  pairing that with a user-friendly font-end. A simple and professional design
+                  thanks to React Bootstrap and my own CSS.{' '}
+                </p>
 
-              <h4 className='project-details-features'>Features Include:</h4>
-              <div className='project-details-features-lists'>
-                <ul className='list'>
-                  <li>- Shopping Cart</li>
-                  <li>- PayPal Payment</li>
-                  <li>- Account Creation</li>
-                  <li>- User Reviews</li>
-                </ul>
-                <ul className='list'>
-                  <li>- Checkout Process</li>
-                  <li>- Add/Remove Products</li>
-                  <li>- Product Search</li>
-                  <li>- Admin Controls</li>
-                </ul>
+                <h4 className='project-details-features'>Features Include:</h4>
+                <div className='project-details-features-lists'>
+                  <ul className='list'>
+                    <li>- Shopping Cart</li>
+                    <li>- PayPal Payment</li>
+                    <li>- Account Creation</li>
+                    <li>- User Reviews</li>
+                  </ul>
+                  <ul className='list'>
+                    <li>- Checkout Process</li>
+                    <li>- Add/Remove Products</li>
+                    <li>- Product Search</li>
+                    <li>- Admin Controls</li>
+                  </ul>
+                </div>
+                <p className='github'>
+                  <a
+                    href='https://github.com/IbnDaanis/ultrastore'
+                    rel='noreferrer'
+                    target='_blank'
+                  >
+                    <span>Link to Repo</span>
+                    <GithubIcon />
+                  </a>
+                </p>
               </div>
-              <p className='github'>
-                <a href='https://github.com/IbnDaanis/ultrastore' rel='noreferrer' target='_blank'>
-                  <span>Link to Repo</span>
-                  <GithubIcon />
-                </a>
-              </p>
+              <Arrow />
             </div>
             <div className='project-image'>
               <a
