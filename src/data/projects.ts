@@ -16,7 +16,10 @@ export const projects: IProject[] = [
     MongoDB and Express. Many hours was spent building the backend using and pairing that
     with a user-friendly font-end. A simple and professional design thanks to React
     Bootstrap and my own CSS.`,
-    description2: 'Hello what',
+    description2: `This is my first big project. It's an E-commerce store build with React, Node JS,
+    MongoDB and Express. Many hours was spent building the backend using and pairing that
+    with a user-friendly font-end. A simple and professional design thanks to React
+    Bootstrap and my own CSS.`,
     list1: ['Shopping Cart', 'PayPal Payment', 'Account Creation', 'User Reviews'],
     list2: ['Checkout Process', 'Add/Remove Products', 'Product Search', 'Admin Controls'],
     repo: 'https://github.com/IbnDaanis/ultrastore',
@@ -25,7 +28,7 @@ export const projects: IProject[] = [
   },
   {
     title: 'Friedrik',
-    description1: ` This project started with me practising React Hooks to make a functional shopping
+    description1: `This project started with me practising React Hooks to make a functional shopping
     cart. However, I got carried away, I tried to make it look very nice... Then I
     decided to add animations to it to make it look more interesting. Framer Motion for
     the animations and SCSS for styling.`,

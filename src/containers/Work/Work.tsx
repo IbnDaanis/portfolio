@@ -1,8 +1,7 @@
 import React from 'react'
+import './Work.scss'
 import { Project } from '../../components/Project/Project'
 import { projects } from '../../data/projects'
-
-import './Work.scss'
 
 export const Work = (): JSX.Element => {
   return (

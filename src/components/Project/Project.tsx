@@ -31,7 +31,7 @@ export const Project = ({
           </div>
           <p className='github'>
             <a href={repo} rel='noreferrer' target='_blank'>
-              <span>Link to Repo</span>
+              <span>Link to Repo:</span>
               <GithubIcon />
             </a>
           </p>

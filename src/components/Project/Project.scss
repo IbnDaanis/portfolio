@@ -2,6 +2,7 @@
   display: flex;
   padding-bottom: 5rem;
   flex-direction: column;
+
   @media (max-width: 1200px) {
     border-bottom: 1px solid rgb(37, 37, 37);
     padding-bottom: 2rem;
@@ -12,13 +13,18 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    height: calc(100vw / 16 * 10);
+    height: calc((1240px * 0.7) / 16 * 9);
+
     @media (max-width: 1200px) {
       order: 2;
     }
 
+    @media (max-width: 950px) {
+      justify-content: center;
+    }
+
     a {
-      width: 60%;
+      width: 70%;
 
       @media (max-width: 950px) {
         width: 100%;
@@ -50,6 +56,7 @@
     }
     .arrow-container {
       width: 30%;
+      position: relative;
 
       @media (max-width: 1000px) {
         display: none;
@@ -85,7 +92,7 @@
 
     .github {
       a {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         fill: #ffd4e2;
 
@@ -94,7 +101,6 @@
           font-size: 1.5rem;
           font-weight: 300;
           color: #ffd4e2;
-          text-transform: uppercase;
           transition: 0.4s ease-in-out 0.2s;
         }
 
@@ -115,7 +121,7 @@
     }
 
     &-features {
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: #ffd4e2;
       font-weight: 300;
       margin-bottom: 0.75rem;
