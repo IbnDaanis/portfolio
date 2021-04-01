@@ -11,6 +11,21 @@ export interface IProject {
 
 export const projects: IProject[] = [
   {
+    title: 'Todoer',
+    description1: `This project was inspired by the app Todoist. It's an app that allows you to create projects and add tasks. You can create an account using an email and password or Google Sign In. I have used Firebase Firestore for the backend.`,
+    description2: `I have implemented basic Create/Read/Updated/Delete features for the tasks. They can be sorted by due date and alphabetically. All tasks can be updated and completed as well. Entire projects can be deleted also. I also cloned the Todoist home screen for the landing page.`,
+    list1: ['React', 'Redux', 'Firebase', 'React Router'],
+    list2: [
+      'Styled Components',
+      'Create different projects',
+      'Add tasks for each project',
+      'Data stored in your account',
+    ],
+    repo: 'https://github.com/IbnDaanis/todoer',
+    website: 'https://todoer-app.netlify.app/',
+    image: '/dist/assets/images/todoer.png',
+  },
+  {
     title: 'UltraStore',
     description1: `This is my first big project. It's an E-commerce store build with React, Node JS,
     MongoDB and Express. Many hours was spent building the backend using and pairing that
