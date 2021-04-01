@@ -1,5 +1,5 @@
 import React from 'react'
-import { Hero, Scroll, Work } from './components'
+import { Hero, Scroll, Work } from './containers'
 
 export const App = (): JSX.Element => {
   return (

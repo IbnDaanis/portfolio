@@ -1,6 +1,6 @@
 import React from 'react'
 import { UltraStore, GithubIcon, Friedrik } from '../../assets'
-import { Arrow } from '../Arrow/Arrow'
+import { Arrow } from '../../components'
 
 import './Work.scss'
 
