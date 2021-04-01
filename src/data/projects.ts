@@ -23,7 +23,7 @@ export const projects: IProject[] = [
     list1: ['Shopping Cart', 'PayPal Payment', 'Account Creation', 'User Reviews'],
     list2: ['Checkout Process', 'Add/Remove Products', 'Product Search', 'Admin Controls'],
     repo: 'https://github.com/IbnDaanis/ultrastore',
-    website: '',
+    website: 'https://ultrastoreapp.herokuapp.com/',
     image: '/dist/assets/images/ultrastore.png',
   },
   {

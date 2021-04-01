@@ -1,2 +1,2 @@
 export { Hero } from './Hero/Hero'
-export { Work } from './Work/Work'
+export { Projects } from './Projects/Projects'
