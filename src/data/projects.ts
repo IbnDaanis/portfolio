@@ -42,7 +42,7 @@ export const projects: IProject[] = [
     decided to add animations to it to make it look more interesting. Framer Motion for
     the animations and SCSS for styling.`,
     description2: '',
-    list1: ['Shopping Cart', 'Individual Product Page', 'React Router', 'Framer Motion Animations'],
+    list1: ['React', 'React Context', 'React Router', 'Framer Motion Animations'],
     list2: ['Page Transitions', 'Dark mode if set on system', 'Layout Transitions'],
     repo: 'https://github.com/IbnDaanis/shopping-cart',
     website: 'https://ibndaanis-shopping-cart.netlify.app/',
