@@ -8,6 +8,15 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &::-moz-selection {
+    color: rgb(255, 255, 255);
+    background: #ffc5c0;
+  }
+  &::selection {
+    color: rgb(255, 255, 255);
+    background: #ffc5c0;
+  }
 }
 
 html {
