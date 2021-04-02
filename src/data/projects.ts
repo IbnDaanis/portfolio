@@ -27,16 +27,10 @@ export const projects: IProject[] = [
   },
   {
     title: 'UltraStore',
-    description1: `This is my first big project. It's an E-commerce store build with React, Node JS,
-    MongoDB and Express. Many hours was spent building the backend using and pairing that
-    with a user-friendly font-end. A simple and professional design thanks to React
-    Bootstrap and my own CSS.`,
-    description2: `This is my first big project. It's an E-commerce store build with React, Node JS,
-    MongoDB and Express. Many hours was spent building the backend using and pairing that
-    with a user-friendly font-end. A simple and professional design thanks to React
-    Bootstrap and my own CSS.`,
-    list1: ['Shopping Cart', 'PayPal Payment', 'Account Creation', 'User Reviews'],
-    list2: ['Checkout Process', 'Add/Remove Products', 'Product Search', 'Admin Controls'],
+    description1: `UltraStore is an E-commerce store that sells tech items. Customers can create an account, add products to the cart, order items and view past orders. All payments are carried out by PayPal and once payment is received, the order will be completed`,
+    description2: `This app also includes an several admin features. Admins can at new products to the catalogue and upload custom images for each item. User accounts can be edited and delete and all orders can be viewed and marked as delivered.`,
+    list1: ['React', 'Redux', 'React Router', 'Bootstrap'],
+    list2: ['Express', 'MongoDB', 'Mongoose', 'NodeJS'],
     repo: 'https://github.com/IbnDaanis/ultrastore',
     website: 'https://ultrastoreapp.herokuapp.com/',
     image: '/dist/assets/images/ultrastore.png',
