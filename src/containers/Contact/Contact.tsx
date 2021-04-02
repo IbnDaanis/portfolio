@@ -7,7 +7,13 @@ export const Contact = (): JSX.Element => {
       <div className='container'>
         <h2 className='contact-heading'>Get in contact with me</h2>
         <div className='contact-form-container'>
-          <form className='contact-form' name='contact' method='POST' data-netlify='true'>
+          <form
+            className='contact-form'
+            name='contactForm'
+            method='POST'
+            data-netlify='true'
+            id='contactForm'
+          >
             <div className='contact-form-item'>
               <label htmlFor='name' className='contact-form-item-label'>
                 Name:
@@ -25,13 +31,12 @@ export const Contact = (): JSX.Element => {
                 Message:
               </label>
               <input
-                type='email'
+                type='text'
                 id='message'
                 name='message'
                 className='contact-form-item-input message'
               />
             </div>
-
             <button type='submit' className='contact-form-submit'>
               Send
             </button>
