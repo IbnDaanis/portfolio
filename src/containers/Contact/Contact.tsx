@@ -14,7 +14,23 @@ export const Contact = (): JSX.Element => {
               </label>
               <input type='text' id='name' name='name' className='contact-form-item-input' />
             </div>
-
+            <div className='contact-form-item'>
+              <label htmlFor='email' className='contact-form-item-label'>
+                Email:
+              </label>
+              <input type='email' id='email' name='email' className='contact-form-item-input' />
+            </div>
+            <div className='contact-form-item'>
+              <label htmlFor='message' className='contact-form-item-label '>
+                Message:
+              </label>
+              <input
+                type='email'
+                id='message'
+                name='message'
+                className='contact-form-item-input message'
+              />
+            </div>
             <p>
               <button type='submit'>Send</button>
             </p>

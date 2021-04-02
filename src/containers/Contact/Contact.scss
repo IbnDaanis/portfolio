@@ -64,15 +64,33 @@
       .contact-form {
         display: flex;
         flex-direction: column;
+        width: 100%;
 
         &-item {
           display: flex;
           align-items: center;
+          justify-content: space-between;
 
           &-label {
             font-weight: 600;
             font-size: 5rem;
             margin-right: 1rem;
+
+            @media (max-width: 850px) {
+              font-size: 4.5rem;
+            }
+
+            @media (max-width: 750px) {
+              font-size: 3.5rem;
+            }
+
+            @media (max-width: 550px) {
+              font-size: 3rem;
+            }
+
+            @media (max-width: 450px) {
+              font-size: 5rem;
+            }
           }
 
           &-input {
@@ -86,6 +104,15 @@
             padding: 0 1rem;
             transition: 0.2s ease-in-out;
             color: #a0a0a0;
+
+            @media (max-width: 850px) {
+              width: 100%;
+            }
+
+            &.message {
+              transform: translateY(10px);
+              font-size: 2rem;
+            }
 
             &:focus {
               border-bottom: 2px solid #ffd4e2;
