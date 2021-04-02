@@ -1,6 +1,6 @@
 import React from 'react'
 import { Scroll } from './components'
-import { Hero, Projects } from './containers'
+import { Contact, Hero, Projects } from './containers'
 
 export const App = (): JSX.Element => {
   return (
@@ -8,6 +8,7 @@ export const App = (): JSX.Element => {
       <Scroll>
         <Hero />
         <Projects />
+        <Contact />
       </Scroll>
     </>
   )
