@@ -12,7 +12,7 @@ export interface IProject {
 export const projects: IProject[] = [
   {
     title: 'Todoer',
-    description1: `This project was inspired by the app Todoist. It's an app that allows you to create projects and add tasks. You can create an account using an email and password or Google Sign In. I have used Firebase Firestore for the backend.`,
+    description1: `Todoer is a clone of task managing app project called Todoist. It's used to create projects to organize your daily tasks. You can create an account using an email and password or Google Sign In. I have used Firebase Firestore for the backend.`,
     description2: `I have implemented basic Create/Read/Updated/Delete features for the tasks. They can be sorted by due date and alphabetically. All tasks can be updated and completed as well. Entire projects can be deleted also. I also cloned the Todoist home screen for the landing page.`,
     list1: ['React', 'Redux', 'Firebase', 'React Router'],
     list2: [
