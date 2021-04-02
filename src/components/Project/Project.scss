@@ -13,7 +13,11 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    height: calc((1240px * 0.7) / 16 * 9);
+    height: calc(((1240px * 0.7) / 16) * 9);
+
+    @media (max-width: 1240px) {
+      height: calc((100vw / 16) * 9);
+    }
 
     @media (max-width: 1200px) {
       order: 2;
