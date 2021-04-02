@@ -9,19 +9,12 @@ export const Contact = (): JSX.Element => {
         <div className='contact-form-container'>
           <form className='contact-form' name='contact' method='POST' data-netlify='true'>
             <div className='contact-form-item'>
-              <label>Your Name:</label>
-              <input type='text' name='name' />
+              <label htmlFor='name' className='contact-form-item-label'>
+                Name:
+              </label>
+              <input type='text' id='name' name='name' className='contact-form-item-input' />
             </div>
-            <p>
-              <label>
-                Your Email: <input type='email' name='email' />
-              </label>
-            </p>
-            <p>
-              <label>
-                Message: <textarea name='message'></textarea>
-              </label>
-            </p>
+
             <p>
               <button type='submit'>Send</button>
             </p>
