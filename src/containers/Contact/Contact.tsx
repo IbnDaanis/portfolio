@@ -31,9 +31,10 @@ export const Contact = (): JSX.Element => {
                 className='contact-form-item-input message'
               />
             </div>
-            <p>
-              <button type='submit'>Send</button>
-            </p>
+
+            <button type='submit' className='contact-form-submit'>
+              Send
+            </button>
           </form>
         </div>
       </div>
