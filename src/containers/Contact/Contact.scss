@@ -71,6 +71,12 @@
           align-items: center;
           justify-content: space-between;
 
+          @media (max-width: 750px) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+          }
+
           &-label {
             font-weight: 600;
             font-size: 5rem;
@@ -89,7 +95,7 @@
             }
 
             @media (max-width: 450px) {
-              font-size: 5rem;
+              font-size: 2rem;
             }
           }
 
@@ -109,9 +115,22 @@
               width: 100%;
             }
 
+            @media (max-width: 550px) {
+              font-size: 2.5rem;
+              padding: 0 0.5rem;
+            }
+
+            @media (max-width: 450px) {
+              font-size: 1.5rem;
+            }
+
             &.message {
               transform: translateY(10px);
               font-size: 2rem;
+
+              @media (max-width: 450px) {
+                font-size: 1.5rem;
+              }
             }
 
             &:focus {
