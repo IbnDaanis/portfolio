@@ -14,6 +14,7 @@ interface IFormData extends IObjectKeys {
 export const Contact = (): JSX.Element => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
 
   const encode = (data: IFormData) => {
     const formData = new FormData()
@@ -26,7 +27,7 @@ export const Contact = (): JSX.Element => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
-    const data: IFormData = { 'form-name': 'contactForm', name, email }
+    const data: IFormData = { 'form-name': 'contactForm', name, email, message }
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -47,6 +48,7 @@ export const Contact = (): JSX.Element => {
             onSubmit={handleSubmit}
             id='contactForm'
           >
+            <input type='hidden' name='form-name' value='contactForm' />
             <div className='contact-form-item'>
               <label htmlFor='name' className='contact-form-item-label'>
                 Name:
@@ -82,6 +84,8 @@ export const Contact = (): JSX.Element => {
                 id='message'
                 name='message'
                 className='contact-form-item-input message'
+                value={message}
+                onChange={({ target }) => setMessage(target.value)}
               />
             </div>
             <button type='submit' className='contact-form-submit'>
