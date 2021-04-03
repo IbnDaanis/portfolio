@@ -1,7 +1,6 @@
 import React from 'react'
-import { ArrowIcon } from '../../assets'
-
 import './Arrow.scss'
+import { ArrowIcon } from '../../assets'
 
 export const Arrow = (): JSX.Element => {
   return (

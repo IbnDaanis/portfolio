@@ -14,7 +14,6 @@ export const Hero = (): JSX.Element => {
         </h1>
         <h2 style={{ transform: `translateY(-${positionY * 0.05}px)` }}>
           Front-End Developer. Self Taught. From London. Looking forward to enter the Industry.
-          <br />
         </h2>
       </div>
     </section>
