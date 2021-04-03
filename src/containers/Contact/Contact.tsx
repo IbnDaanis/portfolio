@@ -27,7 +27,7 @@ export const Contact = (): JSX.Element => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
-    const data: IFormData = { 'form-name': 'contactForm', name, email, message }
+    const data: IFormData = { 'form-name': 'contact', name, email, message }
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -42,13 +42,13 @@ export const Contact = (): JSX.Element => {
         <div className='contact-form-container'>
           <form
             className='contact-form'
-            name='contactForm'
+            name='contact'
             method='POST'
             data-netlify='true'
             onSubmit={handleSubmit}
-            id='contactForm'
+            id='contact'
           >
-            <input type='hidden' name='form-name' value='contactForm' />
+            <input type='hidden' name='form-name' value='contact' />
             <div className='contact-form-item'>
               <label htmlFor='name' className='contact-form-item-label'>
                 Name:
