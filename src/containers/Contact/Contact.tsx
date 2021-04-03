@@ -20,13 +20,25 @@ export const Contact = (): JSX.Element => {
               <label htmlFor='name' className='contact-form-item-label'>
                 Name:
               </label>
-              <input type='text' id='name' name='name' className='contact-form-item-input' />
+              <input
+                type='text'
+                id='name'
+                name='name'
+                className='contact-form-item-input'
+                required
+              />
             </div>
             <div className='contact-form-item'>
               <label htmlFor='email' className='contact-form-item-label'>
                 Email:
               </label>
-              <input type='email' id='email' name='email' className='contact-form-item-input' />
+              <input
+                type='email'
+                id='email'
+                name='email'
+                className='contact-form-item-input'
+                required
+              />
             </div>
             <div className='contact-form-item'>
               <label htmlFor='message' className='contact-form-item-label '>
@@ -37,6 +49,7 @@ export const Contact = (): JSX.Element => {
                 id='message'
                 name='message'
                 className='contact-form-item-input message'
+                required
               />
             </div>
             <button type='submit' className='contact-form-submit'>
