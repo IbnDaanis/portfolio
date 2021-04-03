@@ -1,39 +1,10 @@
 import React, { useState } from 'react'
 import './Contact.scss'
 
-interface IObjectKeys {
-  [key: string]: string
-}
-
-interface IFormData extends IObjectKeys {
-  'form-name': string
-  name: string
-  email: string
-}
-
 export const Contact = (): JSX.Element => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-
-  const encode = (data: IFormData) => {
-    const formData = new FormData()
-    Object.keys(data).forEach(key => {
-      formData.append(key, data[key])
-      console.log(key, data[key])
-    })
-    return formData
-  }
-
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault()
-    const data: IFormData = { 'form-name': 'contact', name, email, message }
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode(data),
-    })
-  }
 
   return (
     <section id='contact' className='contact'>
@@ -45,7 +16,7 @@ export const Contact = (): JSX.Element => {
             name='contact'
             method='POST'
             data-netlify='true'
-            onSubmit={handleSubmit}
+            action='/?success=true'
             id='contact'
           >
             <input type='hidden' name='form-name' value='contact' />
