@@ -45,7 +45,7 @@ export const Project = ({
           rel='noreferrer'
           title='Click to visit this project on a new tab'
         >
-          <img src={image} alt='Project Image' />
+          <img src={image} alt='Project Image' loading='lazy' />
         </a>
       </div>
     </article>
