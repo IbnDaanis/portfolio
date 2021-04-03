@@ -1,11 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Contact.scss'
 
 export const Contact = (): JSX.Element => {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-
   return (
     <section id='contact' className='contact'>
       <div className='container'>
@@ -24,27 +20,13 @@ export const Contact = (): JSX.Element => {
               <label htmlFor='name' className='contact-form-item-label'>
                 Name:
               </label>
-              <input
-                type='text'
-                id='name'
-                name='name'
-                className='contact-form-item-input'
-                value={name}
-                onChange={({ target }) => setName(target.value)}
-              />
+              <input type='text' id='name' name='name' className='contact-form-item-input' />
             </div>
             <div className='contact-form-item'>
               <label htmlFor='email' className='contact-form-item-label'>
                 Email:
               </label>
-              <input
-                type='email'
-                id='email'
-                name='email'
-                className='contact-form-item-input'
-                value={email}
-                onChange={({ target }) => setEmail(target.value)}
-              />
+              <input type='email' id='email' name='email' className='contact-form-item-input' />
             </div>
             <div className='contact-form-item'>
               <label htmlFor='message' className='contact-form-item-label '>
@@ -55,8 +37,6 @@ export const Contact = (): JSX.Element => {
                 id='message'
                 name='message'
                 className='contact-form-item-input message'
-                value={message}
-                onChange={({ target }) => setMessage(target.value)}
               />
             </div>
             <button type='submit' className='contact-form-submit'>
