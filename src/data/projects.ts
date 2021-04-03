@@ -44,8 +44,8 @@ export const projects: IProject[] = [
     description2: '',
     list1: ['React', 'React Context', 'React Router', 'Framer Motion Animations'],
     list2: ['Page Transitions', 'Dark mode if set on system', 'Layout Transitions'],
-    repo: 'https://github.com/IbnDaanis/shopping-cart',
-    website: 'https://ibndaanis-shopping-cart.netlify.app/',
+    repo: 'https://github.com/IbnDaanis/friedrik',
+    website: 'https://friedrik.netlify.app/',
     image: '/dist/assets/images/friedrik.webp',
   },
 ]
