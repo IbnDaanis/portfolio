@@ -9,12 +9,14 @@ export const Hero = (): JSX.Element => {
   return (
     <section id='hero' className='hero'>
       <div className='container'>
-        <h1 style={{ transform: `translateY(-${positionY * 0.1}px)` }}>
-          Hello, I&#39;m <span>Ikraam</span>
-        </h1>
-        <h2 style={{ transform: `translateY(-${positionY * 0.05}px)` }}>
-          Front-End Developer. Self Taught. From London. Looking forward to enter the Industry.
-        </h2>
+        <div className='content'>
+          <h1 style={{ transform: `translateY(-${positionY * 0.1}px)` }}>
+            Hello, I&#39;m <span>Ikraam</span>
+          </h1>
+          <h2 style={{ transform: `translateY(-${positionY * 0.05}px)` }}>
+            Front-End Developer. Self Taught. From London. Looking forward to enter the Industry.
+          </h2>
+        </div>
       </div>
     </section>
   )

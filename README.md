@@ -1,15 +1,15 @@
 # Portfolio
 
-**Check out** the app [here]()
+**Check out** the app [here](https://ikraam-portfolio.netlify.app/)
 
-This is a clone of Todoist
+My Portfolio
 
 ### Libraries/Frameworks used:
 
 - React
-
-### Features of this app:
+- TypeScript
+- SCSS
 
 ## Preview:
 
-![Preview]()
+![Preview](/preview.png)
