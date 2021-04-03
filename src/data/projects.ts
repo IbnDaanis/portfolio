@@ -23,7 +23,7 @@ export const projects: IProject[] = [
     ],
     repo: 'https://github.com/IbnDaanis/todoer',
     website: 'https://todoer-app.netlify.app/',
-    image: '/dist/assets/images/todoer.png',
+    image: '/dist/assets/images/todoer.webp',
   },
   {
     title: 'UltraStore',
@@ -33,7 +33,7 @@ export const projects: IProject[] = [
     list2: ['Express', 'MongoDB', 'Mongoose', 'NodeJS'],
     repo: 'https://github.com/IbnDaanis/ultrastore',
     website: 'https://ultrastoreapp.herokuapp.com/',
-    image: '/dist/assets/images/ultrastore.png',
+    image: '/dist/assets/images/ultrastore.webp',
   },
   {
     title: 'Friedrik',
@@ -46,6 +46,6 @@ export const projects: IProject[] = [
     list2: ['Page Transitions', 'Dark mode if set on system', 'Layout Transitions'],
     repo: 'https://github.com/IbnDaanis/shopping-cart',
     website: 'https://ibndaanis-shopping-cart.netlify.app/',
-    image: '/dist/assets/images/friedrik.png',
+    image: '/dist/assets/images/friedrik.webp',
   },
 ]

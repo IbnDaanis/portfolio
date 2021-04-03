@@ -12,4 +12,4 @@ My Portfolio
 
 ## Preview:
 
-![Preview](/preview.png)
+![Preview](/preview.webp)
