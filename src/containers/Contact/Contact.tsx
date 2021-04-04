@@ -18,7 +18,7 @@ export const Contact = (): JSX.Element => {
             <input type='hidden' name='form-name' value='contact' />
             <div className='contact-form-item'>
               <label htmlFor='name' className='contact-form-item-label'>
-                Name:
+                My name is
               </label>
               <input
                 type='text'
@@ -30,7 +30,7 @@ export const Contact = (): JSX.Element => {
             </div>
             <div className='contact-form-item'>
               <label htmlFor='email' className='contact-form-item-label'>
-                Email:
+                Here is my email
               </label>
               <input
                 type='email'
@@ -42,7 +42,7 @@ export const Contact = (): JSX.Element => {
             </div>
             <div className='contact-form-item'>
               <label htmlFor='message' className='contact-form-item-label '>
-                Message:
+                Let&#39;s speak about
               </label>
               <input
                 type='text'
