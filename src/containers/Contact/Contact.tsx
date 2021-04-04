@@ -25,6 +25,7 @@ export const Contact = (): JSX.Element => {
                 id='name'
                 name='name'
                 className='contact-form-item-input'
+                placeholder='Enter your name here'
                 required
               />
             </div>
@@ -37,6 +38,7 @@ export const Contact = (): JSX.Element => {
                 id='email'
                 name='email'
                 className='contact-form-item-input'
+                placeholder='Enter your email here'
                 required
               />
             </div>
@@ -49,6 +51,7 @@ export const Contact = (): JSX.Element => {
                 id='message'
                 name='message'
                 className='contact-form-item-input message'
+                placeholder='Enter your message here'
                 required
               />
             </div>
