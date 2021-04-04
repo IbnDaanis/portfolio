@@ -16,6 +16,7 @@ export const Contact = (): JSX.Element => {
             id='contact'
           >
             <input type='hidden' name='form-name' value='contact' />
+            <p className='hello'>Hello,</p>
             <div className='contact-form-item'>
               <label htmlFor='name' className='contact-form-item-label'>
                 My name is
