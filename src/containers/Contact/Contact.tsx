@@ -45,7 +45,7 @@ export const Contact = (): JSX.Element => {
             </div>
             <div className='contact-form-item'>
               <label htmlFor='message' className='contact-form-item-label '>
-                The message:
+                Let&#39;s talk about
               </label>
               <input
                 type='text'
