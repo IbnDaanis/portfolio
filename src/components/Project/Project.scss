@@ -30,15 +30,13 @@
 
     a {
       width: 70%;
+      height: 100%;
 
       @media (max-width: 950px) {
         width: 100%;
       }
 
-      img {
-        cursor: pointer;
-        border-radius: 5px;
-        pointer-events: none;
+      div {
         width: 100%;
         height: 100%;
       }

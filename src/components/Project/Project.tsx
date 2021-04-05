@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Project.scss'
 import { GithubIcon } from '../../assets'
 import { IProject } from '../../data/projects'
 import { Arrow } from '../Arrow/Arrow'
+import hoverEffect from 'hover-effect'
 
 export const Project = ({
   project: { title, description1, description2, list1, list2, repo, website, image },
 }: {
   project: IProject
 }): JSX.Element => {
+  useEffect(() => {
+    new hoverEffect({
+      parent: document.querySelector(`.${title}`),
+      intensity: 1,
+      image1: '/dist/assets/images/friedrik.webp',
+      image2: image,
+      displacementImage: '/dist/assets/images/distort.jpg',
+      imagesRatio: 0.5625,
+    })
+  }, [image, title])
   return (
     <article className='project'>
       <div className='project-details'>
@@ -45,7 +56,7 @@ export const Project = ({
           rel='noreferrer'
           title='Click to visit this project on a new tab'
         >
-          <img src={image} alt='Project Image' loading='lazy' />
+          <div className={`${title}`} title='Screenshots of the project' />
         </a>
       </div>
     </article>

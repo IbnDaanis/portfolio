@@ -86,7 +86,7 @@
             outline: 0;
             border-radius: 0;
             font-size: clamp(1rem, calc(16px + 10 * (100vw - 420px) / 1600), 2rem);
-            font-weight: 600;
+            font-weight: 500;
             border-bottom: 2px solid #a0a0a0;
             transition: 0.2s ease-in-out;
             color: #a0a0a0;
@@ -121,6 +121,10 @@
 
           &:active {
             background: white;
+          }
+
+          @media (max-width: 750px) {
+            margin-top: 3rem;
           }
         }
       }
