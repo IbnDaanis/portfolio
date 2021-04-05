@@ -82,6 +82,10 @@
       font-weight: 600;
       margin-bottom: 2rem;
       color: #ffd4e2;
+
+      @media (max-width: 600px) {
+        font-size: 4rem;
+      }
     }
 
     &-description {
@@ -91,6 +95,10 @@
       margin-bottom: 2rem;
       max-width: 800px;
       width: 95%;
+
+      @media (max-width: 600px) {
+        font-size: 1.1rem;
+      }
     }
 
     .github {
@@ -153,6 +161,10 @@
           font-size: 1.5rem;
           font-weight: 400;
           color: rgb(230, 230, 230);
+
+          @media (max-width: 600px) {
+            font-size: 1.1rem;
+          }
         }
       }
     }
