@@ -13,13 +13,18 @@ export const Project = ({
   useEffect(() => {
     new hoverEffect({
       parent: document.querySelector(`.${title}`),
-      intensity: 1,
+      intensity: 0.4,
       image1,
       image2,
       displacementImage: `/dist/assets/images/distort-${Math.floor(Math.random() * 2) + 1}.jpg`,
+      angle: Math.PI / 8,
       imagesRatio: 0.5625,
+      easing: 'power3.out',
+      speedIn: 0.8,
+      speedOut: 0.8,
     })
   }, [image1, image2, title])
+
   return (
     <article className='project'>
       <div className='project-details'>
