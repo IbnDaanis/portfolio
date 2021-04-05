@@ -6,7 +6,8 @@ export interface IProject {
   list2: string[]
   repo: string
   website: string
-  image: string
+  image1: string
+  image2: string
 }
 
 export const projects: IProject[] = [
@@ -23,7 +24,8 @@ export const projects: IProject[] = [
     ],
     repo: 'https://github.com/IbnDaanis/todoer',
     website: 'https://todoer-app.netlify.app/',
-    image: '/dist/assets/images/todoer.webp',
+    image1: '/dist/assets/images/todoer-1.webp',
+    image2: '/dist/assets/images/todoer-2.webp',
   },
   {
     title: 'UltraStore',
@@ -33,7 +35,8 @@ export const projects: IProject[] = [
     list2: ['Express', 'MongoDB', 'Mongoose', 'NodeJS'],
     repo: 'https://github.com/IbnDaanis/ultrastore',
     website: 'https://ultrastoreapp.herokuapp.com/',
-    image: '/dist/assets/images/ultrastore.webp',
+    image1: '/dist/assets/images/ultrastore-1.webp',
+    image2: '/dist/assets/images/ultrastore-2.webp',
   },
   {
     title: 'Friedrik',
@@ -46,6 +49,7 @@ export const projects: IProject[] = [
     list2: ['Page Transitions', 'Dark mode if set on system', 'Layout Transitions'],
     repo: 'https://github.com/IbnDaanis/friedrik',
     website: 'https://friedrik.netlify.app/',
-    image: '/dist/assets/images/friedrik.webp',
+    image1: '/dist/assets/images/friedrik-1.webp',
+    image2: '/dist/assets/images/friedrik-2.webp',
   },
 ]

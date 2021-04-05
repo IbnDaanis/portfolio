@@ -6,7 +6,7 @@ import { Arrow } from '../Arrow/Arrow'
 import hoverEffect from 'hover-effect'
 
 export const Project = ({
-  project: { title, description1, description2, list1, list2, repo, website, image },
+  project: { title, description1, description2, list1, list2, repo, website, image1, image2 },
 }: {
   project: IProject
 }): JSX.Element => {
@@ -14,12 +14,12 @@ export const Project = ({
     new hoverEffect({
       parent: document.querySelector(`.${title}`),
       intensity: 1,
-      image1: '/dist/assets/images/friedrik.webp',
-      image2: image,
+      image1,
+      image2,
       displacementImage: '/dist/assets/images/distort.jpg',
       imagesRatio: 0.5625,
     })
-  }, [image, title])
+  }, [image1, image2, title])
   return (
     <article className='project'>
       <div className='project-details'>
