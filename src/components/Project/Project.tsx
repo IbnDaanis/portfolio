@@ -16,7 +16,7 @@ export const Project = ({
       intensity: 1,
       image1,
       image2,
-      displacementImage: '/dist/assets/images/distort.jpg',
+      displacementImage: `/dist/assets/images/distort-${Math.floor(Math.random() * 2) + 1}.jpg`,
       imagesRatio: 0.5625,
     })
   }, [image1, image2, title])
