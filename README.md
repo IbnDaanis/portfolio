@@ -8,6 +8,8 @@ My Portfolio
 
 - React
 - TypeScript
+- Hover Effect
+- Smooth Scrollbar
 - SCSS
 
 ## Preview:
