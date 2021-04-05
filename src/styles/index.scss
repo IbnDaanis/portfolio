@@ -24,6 +24,7 @@ html {
 }
 
 body {
+  cursor: none;
   overflow-x: hidden;
   overscroll-behavior-y: none;
   background: #111;
@@ -57,4 +58,14 @@ ul {
 
 .hide {
   display: none !important;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
 }
