@@ -15,8 +15,8 @@ export const Header = (): JSX.Element => {
     <header className='header'>
       <nav className='navbar'>
         <ul className='navbar-list'>
-          <li className='navbar-list-item' onClick={handleClick} data-id='hero'>
-            Top
+          <li className='navbar-list-item' onClick={handleClick} data-id='about'>
+            About
           </li>
           <li className='navbar-list-item' onClick={handleClick} data-id='projects'>
             Projects

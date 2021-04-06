@@ -1,19 +1,34 @@
-.arrow-ring {
-  width: 100%;
-  padding-top: 100%;
-  height: 0;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  border: 2px solid rgb(231, 231, 231);
-}
-.arrow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 130px;
-  color: #ffc5c0;
+.arrow-container {
+  &:hover {
+    .arrow-ring {
+      background: #ffc5c0;
+      border: 2px solid #ffc5c0;
+
+      .arrow {
+        color: #111;
+      }
+    }
+  }
+  .arrow-ring {
+    width: 100%;
+    padding-top: 100%;
+    height: 0;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 2px solid rgb(231, 231, 231);
+    transition: 0.3s ease-in-out;
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 130px;
+      color: #ffc5c0;
+      transition: 0.3s ease-in-out;
+    }
+  }
 }
