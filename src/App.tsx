@@ -8,21 +8,14 @@ export const App = (): JSX.Element => {
     console.clear()
   }, [])
 
-  const [cursorPosition, setCursorPosition] = useState({ pageY: 0, pageX: 0 })
+  const [cursorPosition, setCursorPosition] = useState({ pageY: -30, pageX: -30 })
   const { pageY, pageX } = cursorPosition
 
   const [pointer, setPointer] = useState(false)
-
   useEffect(() => {
-    // const toggleFocus = ({ target }: { target: EventTarget }) => {
-    //   const element = document.querySelector('.project-image'!)
-    //   // if (element?.current?.contains(target)) return
-    //   !element.contains(target) && console.log('Hi')
-    // }
     document.addEventListener('mousemove', event => {
       const element: HTMLAnchorElement | null = document.querySelector('.project-image a')
       if (event.target && element && element.contains(event.target as Node)) {
-        // if (element?.current?.contains(target)) return
         setPointer(true)
         return setCursorPosition({ pageY: event.clientY - 20, pageX: event.clientX - 20 })
       }
