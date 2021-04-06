@@ -14,13 +14,13 @@ export const App = (): JSX.Element => {
   const [pointer, setPointer] = useState(false)
   useEffect(() => {
     document.addEventListener('mouseleave', () => {
-      setCursorPosition({ pageY: -30, pageX: -30 })
+      setCursorPosition({ pageY: -55, pageX: -55 })
     })
     document.addEventListener('mousemove', event => {
-      const element: HTMLAnchorElement | null = document.querySelector('.project-image a')
-      if (event.target && element && element.contains(event.target as Node)) {
+      const element: NodeList | null = document.querySelectorAll('.project-image a')
+      if ([...element].some(el => el.contains(event.target as Node)) && event.target && element) {
         setPointer(true)
-        return setCursorPosition({ pageY: event.clientY - 20, pageX: event.clientX - 20 })
+        return setCursorPosition({ pageY: event.clientY - 50, pageX: event.clientX - 50 })
       }
       setPointer(false)
       setCursorPosition({ pageY: event.clientY - 10, pageX: event.clientX - 10 })
@@ -49,7 +49,9 @@ export const App = (): JSX.Element => {
         <div
           className={`cursor ${pointer ? 'cursor-pointer' : ''}`}
           style={{ top: pageY, left: pageX }}
-        ></div>
+        >
+          <span>{pointer && 'Click to view'}</span>
+        </div>
       )}
     </>
   )

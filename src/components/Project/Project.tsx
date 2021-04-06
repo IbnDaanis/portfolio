@@ -65,19 +65,14 @@ export const Project = ({
         <Arrow />
       </div>
       <div
-        className='project-image'
+        className={`project-image project-image-${title}`}
         data-aos='fade-up'
         data-aos-offset='400'
         data-aos-duration='800'
         data-aos-easing='ease-in-out'
       >
-        <a
-          href={website}
-          target='_blank'
-          rel='noreferrer'
-          title='Click to visit this project on a new tab'
-        >
-          <div className={`${title}`} />
+        <a href={website} target='_blank' rel='noreferrer'>
+          <div className={`${title}`}></div>
         </a>
       </div>
     </article>
