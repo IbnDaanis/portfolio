@@ -105,8 +105,11 @@
           }
         }
 
-        &-submit {
+        .button-container {
           margin-top: 5rem;
+        }
+
+        &-submit {
           background: #ffc5c0;
           border: 0;
           outline: 0;

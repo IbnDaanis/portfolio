@@ -1,15 +1,18 @@
 import React, { useEffect } from 'react'
-import './Project.scss'
+import hoverEffect from 'hover-effect'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import { GithubIcon } from '../../assets'
 import { IProject } from '../../data/projects'
 import { Arrow } from '../Arrow/Arrow'
-import hoverEffect from 'hover-effect'
+import './Project.scss'
 
 export const Project = ({
   project: { title, description1, description2, list1, list2, repo, website, image1, image2 },
 }: {
   project: IProject
 }): JSX.Element => {
+  useEffect(() => AOS.init({ once: true }), [])
   useEffect(() => {
     new hoverEffect({
       parent: document.querySelector(`.${title}`),
@@ -28,7 +31,13 @@ export const Project = ({
 
   return (
     <article className='project'>
-      <div className='project-details'>
+      <div
+        className='project-details'
+        data-aos='fade-up'
+        data-aos-offset='250'
+        data-aos-duration='800'
+        data-aos-easing='ease-in-out'
+      >
         <div className='project-details-container'>
           <h3 className='project-details-title'>{title}</h3>
           <p className='project-details-description'>{description1}</p>
@@ -55,7 +64,13 @@ export const Project = ({
         </div>
         <Arrow />
       </div>
-      <div className='project-image'>
+      <div
+        className='project-image'
+        data-aos='fade-up'
+        data-aos-offset='400'
+        data-aos-duration='800'
+        data-aos-easing='ease-in-out'
+      >
         <a
           href={website}
           target='_blank'

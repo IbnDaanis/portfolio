@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import './Contact.scss'
 
 export const Contact = (): JSX.Element => {
+  useEffect(() => AOS.init({ once: true }), [])
+
   return (
     <section id='contact' className='contact'>
       <div className='container'>
-        <h2 className='contact-heading'>Contact Me</h2>
+        <h2
+          className='contact-heading'
+          data-aos='fade-up'
+          data-aos-offset='250'
+          data-aos-duration='800'
+          data-aos-easing='ease-in-out'
+        >
+          Contact Me
+        </h2>
         <div className='contact-form-container'>
           <form
             className='contact-form'
@@ -16,8 +28,22 @@ export const Contact = (): JSX.Element => {
             id='contact'
           >
             <input type='hidden' name='form-name' value='contact' />
-            <p className='hello'>Hello,</p>
-            <div className='contact-form-item'>
+            <p
+              className='hello'
+              data-aos='fade-up'
+              data-aos-offset='250'
+              data-aos-duration='800'
+              data-aos-easing='ease-in-out'
+            >
+              Hello,
+            </p>
+            <div
+              className='contact-form-item'
+              data-aos='fade-up'
+              data-aos-offset='250'
+              data-aos-duration='800'
+              data-aos-easing='ease-in-out'
+            >
               <label htmlFor='name' className='contact-form-item-label'>
                 My name is
               </label>
@@ -30,7 +56,13 @@ export const Contact = (): JSX.Element => {
                 required
               />
             </div>
-            <div className='contact-form-item'>
+            <div
+              className='contact-form-item'
+              data-aos='fade-up'
+              data-aos-offset='250'
+              data-aos-duration='800'
+              data-aos-easing='ease-in-out'
+            >
               <label htmlFor='email' className='contact-form-item-label'>
                 Here is my email
               </label>
@@ -43,7 +75,13 @@ export const Contact = (): JSX.Element => {
                 required
               />
             </div>
-            <div className='contact-form-item'>
+            <div
+              className='contact-form-item'
+              data-aos='fade-up'
+              data-aos-offset='250'
+              data-aos-duration='800'
+              data-aos-easing='ease-in-out'
+            >
               <label htmlFor='message' className='contact-form-item-label '>
                 Let&#39;s talk about
               </label>
@@ -56,9 +94,17 @@ export const Contact = (): JSX.Element => {
                 required
               />
             </div>
-            <button type='submit' className='contact-form-submit'>
-              Send
-            </button>
+            <div
+              className='button-container'
+              data-aos='fade-up'
+              data-aos-offset='250'
+              data-aos-duration='800'
+              data-aos-easing='ease-in-out'
+            >
+              <button type='submit' className='contact-form-submit'>
+                Send
+              </button>
+            </div>
           </form>
         </div>
       </div>
