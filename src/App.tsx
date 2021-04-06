@@ -13,6 +13,9 @@ export const App = (): JSX.Element => {
 
   const [pointer, setPointer] = useState(false)
   useEffect(() => {
+    document.addEventListener('mouseleave', () => {
+      setCursorPosition({ pageY: -30, pageX: -30 })
+    })
     document.addEventListener('mousemove', event => {
       const element: HTMLAnchorElement | null = document.querySelector('.project-image a')
       if (event.target && element && element.contains(event.target as Node)) {

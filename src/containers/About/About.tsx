@@ -8,8 +8,16 @@ export const About = (): JSX.Element => {
         <h2 className='about-heading'>About Me</h2>
         <div className='content'>
           <p className='about-content'>
-            Learning to code has been a tough journey. With the help of developers on YouTube, I
-            have learnt so much. I remember once being overwhelmed by HTML and SCSS, now I&#39;m
+            Learning to code has been a tough journey. With the help of{' '}
+            <a
+              href='https://www.youtube.com/channel/UCSKr_gILoWAETdYpAoCxB0w/channels?view=56&shelf_id=0'
+              target='blank'
+              rel='noreferrer'
+              className='link'
+            >
+              developers on YouTube,
+            </a>{' '}
+            I have learnt so much. I remember once being overwhelmed by HTML and SCSS, now I&#39;m
             creating this website in React and TypeScript.
           </p>
           <p className='about-content'>

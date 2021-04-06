@@ -24,6 +24,11 @@ export const Header = (): JSX.Element => {
           <li className='navbar-list-item' onClick={handleClick} data-id='contact'>
             Contact
           </li>
+          <li className='navbar-list-item'>
+            <a href='https://github.com/IbnDaanis' target='blank' rel='noreferrer'>
+              GitHub
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
