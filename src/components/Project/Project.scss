@@ -31,6 +31,7 @@
     a {
       width: 70%;
       height: 100%;
+      cursor: none;
 
       @media (max-width: 950px) {
         width: 100%;
@@ -84,7 +85,8 @@
       color: #ffd4e2;
 
       @media (max-width: 600px) {
-        font-size: 4rem;
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
       }
     }
 
@@ -98,6 +100,7 @@
 
       @media (max-width: 600px) {
         font-size: 1.1rem;
+        line-height: 1.3;
       }
     }
 

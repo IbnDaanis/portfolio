@@ -62,7 +62,7 @@ export const Project = ({
           rel='noreferrer'
           title='Click to visit this project on a new tab'
         >
-          <div className={`${title}`} title='Screenshots of the project' />
+          <div className={`${title}`} />
         </a>
       </div>
     </article>
