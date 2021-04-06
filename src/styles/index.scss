@@ -8,6 +8,7 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: none;
 
   &::-moz-selection {
     color: rgb(255, 255, 255);
@@ -24,7 +25,6 @@ html {
 }
 
 body {
-  cursor: none;
   overflow-x: hidden;
   overscroll-behavior-y: none;
   background: #111;
@@ -40,6 +40,7 @@ body {
 a {
   text-decoration: none;
   color: unset;
+  cursor: none;
 }
 
 input {
