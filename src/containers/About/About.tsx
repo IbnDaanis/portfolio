@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './About.scss'
+import { Title } from '../../components'
 
 export const About = (): JSX.Element => {
   useEffect(() => AOS.init({ once: true }), [])
@@ -9,15 +10,7 @@ export const About = (): JSX.Element => {
   return (
     <section id='about' className='about'>
       <div className='container'>
-        <h2
-          className='about-heading'
-          data-aos='fade-up'
-          data-aos-offset='250'
-          data-aos-duration='800'
-          data-aos-easing='ease-in-out'
-        >
-          About Me
-        </h2>
+        <Title title='About Me' />
         <div className='content'>
           <p
             className='about-content'

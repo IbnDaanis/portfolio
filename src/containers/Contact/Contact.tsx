@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './Contact.scss'
+import { Title } from '../../components'
 
 export const Contact = (): JSX.Element => {
   useEffect(() => AOS.init({ once: true }), [])
@@ -9,15 +10,7 @@ export const Contact = (): JSX.Element => {
   return (
     <section id='contact' className='contact'>
       <div className='container'>
-        <h2
-          className='contact-heading'
-          data-aos='fade-up'
-          data-aos-offset='250'
-          data-aos-duration='800'
-          data-aos-easing='ease-in-out'
-        >
-          Contact Me
-        </h2>
+        <Title title='Contact Me' />
         <div className='contact-form-container'>
           <form
             className='contact-form'

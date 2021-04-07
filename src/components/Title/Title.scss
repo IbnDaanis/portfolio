@@ -1,0 +1,27 @@
+.title {
+  font-size: clamp(2rem, calc(40px + 100 * (100vw - 220px) / 1600), 8rem);
+  text-transform: uppercase;
+  line-height: 1;
+  color: #ffcddd;
+  margin: 8rem auto 8rem;
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #ffcddd;
+
+  @media (max-width: 1200px) {
+    margin: 8rem auto 5rem;
+    text-align: left;
+    padding-bottom: 0.5rem;
+  }
+
+  @media (max-width: 700px) {
+    margin: 5rem auto 3rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 10vw;
+    margin: 4rem 0 2.5rem;
+    width: fit-content;
+  }
+}
