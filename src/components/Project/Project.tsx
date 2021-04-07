@@ -65,7 +65,7 @@ export const Project = ({
         <Arrow />
       </div>
       <div
-        className={`project-image project-image-${title}`}
+        className={`project-image project-image-large project-image-${title}`}
         data-aos='fade-up'
         data-aos-offset='400'
         data-aos-duration='800'
@@ -73,6 +73,26 @@ export const Project = ({
       >
         <a href={website} target='_blank' rel='noreferrer'>
           <div className={`${title}`}></div>
+        </a>
+      </div>
+      <div className={`project-image project-image-mobile`}>
+        <a href={website} target='_blank' rel='noreferrer'>
+          <img
+            src={image1}
+            alt='Screenshot of the project'
+            data-aos='fade-up'
+            data-aos-offset='400'
+            data-aos-duration='800'
+            data-aos-easing='ease-in-out'
+          />
+          <img
+            src={image2}
+            alt='Screenshot of the project'
+            data-aos='fade-up'
+            data-aos-offset='400'
+            data-aos-duration='800'
+            data-aos-easing='ease-in-out'
+          />
         </a>
       </div>
     </article>
