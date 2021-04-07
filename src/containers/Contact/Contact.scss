@@ -4,21 +4,21 @@
     position: relative;
     flex-direction: column;
     justify-content: center;
-    max-width: 95%;
+    max-width: 85%;
     width: 1920px;
     margin: 0 auto;
     padding: 0 0 15rem;
 
     .contact-heading {
-      font-size: clamp(2rem, calc(40px + 100 * (100vw - 220px) / 1600), 7rem);
+      font-size: clamp(2rem, calc(40px + 100 * (100vw - 220px) / 1600), 8rem);
       text-transform: uppercase;
       line-height: 1;
-      color: #ffc5c0;
+      color: #ffd5b7;
       margin: 8rem auto 8rem;
       text-align: center;
       font-weight: 600;
       padding-bottom: 1rem;
-      border-bottom: 2px solid #ffc5c0;
+      border-bottom: 2px solid #ffd5b7;
 
       @media (max-width: 1200px) {
         margin: 8rem auto 5rem;
@@ -28,6 +28,12 @@
 
       @media (max-width: 700px) {
         margin: 5rem auto 3rem;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 10vw;
+        margin: 4rem 0 2.5rem;
+        width: fit-content;
       }
     }
 
@@ -106,19 +112,29 @@
         }
 
         .button-container {
-          margin-top: 5rem;
+          margin-top: 4rem;
+
+          @media (max-width: 600px) {
+            margin-top: 2rem;
+          }
         }
 
         &-submit {
           background: #ffc5c0;
           border: 0;
-          outline: 0;
-          width: 150px;
-          height: 150px;
           border-radius: 50%;
-          font-size: 1.8rem;
+          outline: 0;
+          width: 10rem;
+          height: 10rem;
+          font-size: 2.5rem;
           font-weight: 600;
           transition: 0.2s ease-in-out;
+
+          @media (max-width: 600px) {
+            width: 7rem;
+            height: 7rem;
+            font-size: 1.5rem;
+          }
 
           &:hover {
             filter: brightness(1.05);
@@ -127,10 +143,6 @@
 
           &:active {
             background: white;
-          }
-
-          @media (max-width: 750px) {
-            margin-top: 3rem;
           }
         }
       }
