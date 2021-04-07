@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react'
 import gsap from 'gsap'
-
 import './Intro.scss'
 
 export const Intro = (): JSX.Element => {
   useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0)
+      document.body.style.overflow = 'hidden'
+    }, 500)
+
     const handleComplete = (): void => {
       document.body.style.overflow = 'unset'
     }

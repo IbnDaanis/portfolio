@@ -3,14 +3,6 @@
   top: 1%;
   left: 1%;
   z-index: 99;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.8s ease-in-out;
-
-  &.visible {
-    opacity: 1;
-    pointer-events: unset;
-  }
 
   @media (max-width: 600px) {
     top: 0px;
@@ -39,8 +31,9 @@
       &-item {
         font-size: 1.4rem;
         margin-bottom: 4px;
-        transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out, opacity 0.8s ease-in-out;
         color: #ffd4e2;
+        opacity: 0;
 
         @media (hover: hover) {
           &:hover {

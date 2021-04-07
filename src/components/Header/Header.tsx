@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import gsap from 'gsap'
 import { useScroll } from '../../hooks/useScroll'
 import './Header.scss'
 
@@ -10,6 +11,21 @@ export const Header = (): JSX.Element => {
     const element = document.querySelector(`#${target.dataset.id}`)
     element && window.scrollTo(0, element.getBoundingClientRect().top + positionY)
   }
+
+  useEffect(() => {
+    const handleComplete = (): void => {
+      document.body.style.overflow = 'unset'
+    }
+    const tl = gsap.timeline({ onComplete: handleComplete })
+
+    tl.to('.navbar-list-item', {
+      delay: 5.5,
+      duration: 0.8,
+      ease: 'power3.out',
+      opacity: 1,
+      stagger: { each: 0.4 },
+    })
+  }, [])
 
   return (
     <header className='header'>
