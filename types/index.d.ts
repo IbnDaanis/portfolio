@@ -11,3 +11,4 @@ declare module '*.svg' {
 }
 
 declare module 'hover-effect'
+declare module 'gsap'
