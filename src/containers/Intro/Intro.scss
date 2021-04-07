@@ -1,0 +1,26 @@
+.intro {
+  position: fixed;
+  height: 100vh;
+  z-index: 10000;
+
+  .welcome {
+    font-size: clamp(2rem, calc(40px + 100 * (100vw - 220px) / 1600), 7rem);
+    font-weight: 600;
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    z-index: 12000;
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+
+  .back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 11000;
+  }
+}

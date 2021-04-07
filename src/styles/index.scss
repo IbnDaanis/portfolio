@@ -25,6 +25,7 @@ html {
 }
 
 body {
+  overflow: hidden;
   overflow-x: hidden;
   overscroll-behavior-y: none;
   background: #111;
@@ -67,7 +68,7 @@ ul {
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  z-index: 1001;
+  z-index: 100;
 }
 
 .cursor-pointer {
@@ -81,5 +82,5 @@ ul {
   place-content: center;
   font-weight: 500;
   color: #111;
-  z-index: 103;
+  z-index: 101;
 }

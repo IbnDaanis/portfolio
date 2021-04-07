@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Header, Scroll } from './components'
-import { About, Contact, Hero, Projects } from './containers'
+import { About, Contact, Hero, Intro, Projects } from './containers'
 import { userAgentMobile } from './utils/userAgentMobile'
 
 export const App = (): JSX.Element => {
@@ -30,6 +30,7 @@ export const App = (): JSX.Element => {
   return (
     <>
       <Header />
+      <Intro />
       {userAgentMobile ? (
         <>
           <Hero />
