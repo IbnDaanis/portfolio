@@ -27,6 +27,7 @@ export const App = (): JSX.Element => {
 
   setTimeout(() => {
     setDisplayApp && setDisplayApp(true)
+    document.body.style.background = '#151515'
   }, 1550)
 
   useEffect(() => {
@@ -39,12 +40,12 @@ export const App = (): JSX.Element => {
       <Intro />
       {displayApp ? (
         userAgentMobile ? (
-          <div className='mobile'>
+          <>
             <Hero />
             <About />
             <Projects />
             <Contact />
-          </div>
+          </>
         ) : (
           <Scroll>
             <Hero />

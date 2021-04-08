@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import hoverEffect from 'hover-effect'
+import { gsap, ScrollTrigger } from 'gsap/all'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { GithubIcon } from '../../assets'
 import { IProject } from '../../data/projects'
-import { Arrow } from '../Arrow/Arrow'
+import { Arrow } from '../'
 import './Project.scss'
 
 export const Project = ({
@@ -28,6 +29,41 @@ export const Project = ({
       displacementImage: `/dist/assets/images/distort-${Math.floor(Math.random() * 2) + 1}.jpg`,
     })
   }, [image1, image2, title])
+
+  const imageCover1 = useRef<HTMLDivElement>(null)
+  const imageCover2 = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+
+    if (imageCover1.current && imageCover2.current) {
+      const imageCover1Tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: imageCover1.current,
+          start: 'top 80%',
+        },
+      })
+
+      imageCover1Tl.to([imageCover1.current], {
+        duration: 1.5,
+        y: '-100%',
+        ease: Expo.easeInOut,
+      })
+
+      const imageCover2Tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: imageCover2.current,
+          start: 'top 80%',
+        },
+      })
+
+      imageCover2Tl.to([imageCover2.current], {
+        duration: 1.5,
+        y: '-100%',
+        ease: Expo.easeInOut,
+      })
+    }
+  }, [])
 
   return (
     <article className='project'>
@@ -64,35 +100,21 @@ export const Project = ({
         </div>
         <Arrow />
       </div>
-      <div
-        className={`project-image project-image-large project-image-${title}`}
-        data-aos='fade-up'
-        data-aos-offset='400'
-        data-aos-duration='800'
-        data-aos-easing='ease-in-out'
-      >
+      <div className={`project-image project-image-large project-image-${title}`}>
         <a href={website} target='_blank' rel='noreferrer'>
-          <div className={`${title}`}></div>
+          <div className={`canvas-container ${title}`}></div>
         </a>
       </div>
       <div className={`project-image project-image-mobile`}>
         <a href={website} target='_blank' rel='noreferrer'>
-          <img
-            src={image1}
-            alt='Screenshot of the project'
-            data-aos='fade-up'
-            data-aos-offset='400'
-            data-aos-duration='800'
-            data-aos-easing='ease-in-out'
-          />
-          <img
-            src={image2}
-            alt='Screenshot of the project'
-            data-aos='fade-up'
-            data-aos-offset='400'
-            data-aos-duration='800'
-            data-aos-easing='ease-in-out'
-          />
+          <div className='project-image-mobile-container cover-top'>
+            <img src={image1} alt='Screenshot of the project' />
+            <div className='project-image-mobile-container-cover ' ref={imageCover1}></div>
+          </div>
+          <div className='project-image-mobile-container'>
+            <img src={image2} alt='Screenshot of the project' />
+            <div className='project-image-mobile-container-cover' ref={imageCover2}></div>
+          </div>
         </a>
       </div>
     </article>

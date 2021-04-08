@@ -44,7 +44,7 @@
         width: 100%;
       }
 
-      div {
+      .canvas-container {
         width: 100%;
         height: 100%;
       }
@@ -53,13 +53,34 @@
 
   &-image-mobile {
     display: none;
+
     @media (max-width: 600px) {
       display: block;
+      position: relative;
       height: calc((85vw / 16) * 18);
 
       a {
+        width: 100%;
+        height: 100%;
+      }
+
+      &-container {
+        width: 100%;
+        height: calc((85vw / 16) * 9);
+        position: relative;
+        overflow: hidden;
+
         img {
           width: 100%;
+        }
+
+        &-cover {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #151515;
         }
       }
     }

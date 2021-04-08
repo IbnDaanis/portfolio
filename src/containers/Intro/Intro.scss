@@ -2,6 +2,7 @@
   position: fixed;
   height: 100vh;
   z-index: 10000;
+  pointer-events: none;
 
   .welcome {
     font-size: clamp(2rem, calc(40px + 100 * (100vw - 220px) / 1600), 7rem);
