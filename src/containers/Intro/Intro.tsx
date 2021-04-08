@@ -36,7 +36,7 @@ export const Intro = (): JSX.Element => {
     tl.to('.back', {
       duration: 1.5,
       ease: Expo.easeInOut,
-      y: '-100%',
+      y: '-120%',
     })
   }, [])
 

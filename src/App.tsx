@@ -39,12 +39,12 @@ export const App = (): JSX.Element => {
       <Intro />
       {displayApp ? (
         userAgentMobile ? (
-          <>
+          <div className='mobile'>
             <Hero />
             <About />
             <Projects />
             <Contact />
-          </>
+          </div>
         ) : (
           <Scroll>
             <Hero />
