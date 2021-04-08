@@ -1,27 +1,33 @@
 import React, { useEffect } from 'react'
 import { gsap, ScrollTrigger } from 'gsap/all'
 import './Title.scss'
+import { useWindowSize } from '../../hooks/useWindowSize'
 
 type text = string
 
 export const Title = ({ title }: { title: text }): JSX.Element => {
+  const { width } = useWindowSize()
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
 
     const titleTl = gsap.timeline({
-      scrollTrigger: `.title-${title.replace(' ', '')}`,
-      start: 0,
+      scrollTrigger: {
+        trigger: `.title-${title.replace(' ', '')}`,
+        start: width < 600 ? 'top 80%' : 'top bottom',
+      },
     })
 
-    titleTl.from(`.title-${title.replace(' ', '')}`, {
+    titleTl.to(`.title-${title.replace(' ', '')}`, {
       duration: 1,
-      y: '100%',
+      y: 0,
       ease: 'power3.out',
     })
 
     const lineTl = gsap.timeline({
-      scrollTrigger: `.title-line-${title.replace(' ', '')}`,
-      start: 0,
+      scrollTrigger: {
+        trigger: `.title-line-${title.replace(' ', '')}`,
+        start: width < 600 ? 'top 80%' : 0,
+      },
     })
 
     lineTl.to(`.title-line-${title.replace(' ', '')}`, {
@@ -30,7 +36,7 @@ export const Title = ({ title }: { title: text }): JSX.Element => {
       ease: 'power3.out',
       width: '100%',
     })
-  }, [title])
+  }, [width, title])
 
   return (
     <div className='title-container'>
