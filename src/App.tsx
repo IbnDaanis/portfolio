@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Header, Scroll } from './components'
 import { About, Contact, Hero, Intro, Projects } from './containers'
-import { DisplayAppContext, useDisplayAppContext } from './hooks/useDisplayAppContext'
 import { userAgentMobile } from './utils/userAgentMobile'
 
 export const App = (): JSX.Element => {
@@ -28,10 +27,18 @@ export const App = (): JSX.Element => {
     })
   }, [])
 
-  const { displayApp, setDisplayApp } = useDisplayAppContext()
+  const [displayApp, setDisplayApp] = useState(false)
+
+  setTimeout(() => {
+    setDisplayApp && setDisplayApp(true)
+  }, 1550)
+
+  useEffect(() => {
+    displayApp && console.clear()
+  }, [displayApp])
 
   return (
-    <DisplayAppContext.Provider value={{ displayApp, setDisplayApp }}>
+    <>
       <Header />
       <Intro />
       {displayApp ? (
@@ -59,6 +66,6 @@ export const App = (): JSX.Element => {
           <span>{pointer && 'Click to view'}</span>
         </div>
       )}
-    </DisplayAppContext.Provider>
+    </>
   )
 }

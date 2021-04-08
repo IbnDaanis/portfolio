@@ -1,12 +1,9 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import gsap from 'gsap'
 import './Intro.scss'
 import { Expo } from 'gsap/all'
-import { DisplayAppContext } from '../../hooks/useDisplayAppContext'
 
 export const Intro = (): JSX.Element => {
-  const { setDisplayApp } = useContext(DisplayAppContext)
-
   useEffect(() => {
     setTimeout(() => {
       document.body.style.overflow = 'hidden'
@@ -14,7 +11,6 @@ export const Intro = (): JSX.Element => {
 
     const handleComplete = (): void => {
       document.body.style.overflow = 'unset'
-      setDisplayApp && setDisplayApp(true)
     }
 
     const tl = gsap.timeline({ onComplete: handleComplete })
@@ -40,7 +36,7 @@ export const Intro = (): JSX.Element => {
       ease: Expo.easeInOut,
       y: '-100%',
     })
-  }, [setDisplayApp])
+  }, [])
 
   return (
     <section className='intro'>

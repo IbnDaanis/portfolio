@@ -9,7 +9,7 @@ export const Hero = (): JSX.Element => {
   useEffect(() => {
     const tl = gsap.timeline()
     tl.to('.line', {
-      delay: 0.2,
+      delay: 5.5,
       duration: 0.8,
       ease: Expo.easeInOut,
       y: '100%',
