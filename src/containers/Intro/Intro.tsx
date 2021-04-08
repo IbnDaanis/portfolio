@@ -10,7 +10,9 @@ export const Intro = (): JSX.Element => {
     }, 500)
 
     const handleComplete = (): void => {
-      document.body.style.overflow = 'unset'
+      setTimeout(() => {
+        document.body.style.overflow = 'unset'
+      }, 4000)
     }
 
     const tl = gsap.timeline({ onComplete: handleComplete })
