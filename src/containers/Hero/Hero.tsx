@@ -9,9 +9,9 @@ export const Hero = (): JSX.Element => {
   useEffect(() => {
     const tl = gsap.timeline()
     tl.to('.line', {
-      delay: 5.5,
+      delay: 4.5,
       duration: 0.8,
-      ease: Expo.easeInOut,
+      ease: Expo.easeIn,
       y: '100%',
       stagger: { each: 0.4 },
     })
