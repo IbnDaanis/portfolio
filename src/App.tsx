@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Header, Scroll } from './components'
 import { About, Contact, Hero, Intro, Projects } from './containers'
+import { DisplayAppContext, useDisplayAppContext } from './hooks/useDisplayAppContext'
 import { userAgentMobile } from './utils/userAgentMobile'
 
 export const App = (): JSX.Element => {
   useEffect(() => {
-    console.clear()
+    // console.clear()
   }, [])
 
   const [cursorPosition, setCursorPosition] = useState({ pageY: -30, pageX: -30 })
@@ -27,25 +28,29 @@ export const App = (): JSX.Element => {
     })
   }, [])
 
+  const { displayApp, setDisplayApp } = useDisplayAppContext()
+
   return (
-    <>
+    <DisplayAppContext.Provider value={{ displayApp, setDisplayApp }}>
       <Header />
       <Intro />
-      {userAgentMobile ? (
-        <>
-          <Hero />
-          <About />
-          <Projects />
-          <Contact />
-        </>
-      ) : (
-        <Scroll>
-          <Hero />
-          <About />
-          <Projects />
-          <Contact />
-        </Scroll>
-      )}
+      {displayApp ? (
+        userAgentMobile ? (
+          <>
+            <Hero />
+            <About />
+            <Projects />
+            <Contact />
+          </>
+        ) : (
+          <Scroll>
+            <Hero />
+            <About />
+            <Projects />
+            <Contact />
+          </Scroll>
+        )
+      ) : null}
       {!userAgentMobile && (
         <div
           className={`cursor ${pointer ? 'cursor-pointer' : ''}`}
@@ -54,6 +59,6 @@ export const App = (): JSX.Element => {
           <span>{pointer && 'Click to view'}</span>
         </div>
       )}
-    </>
+    </DisplayAppContext.Provider>
   )
 }

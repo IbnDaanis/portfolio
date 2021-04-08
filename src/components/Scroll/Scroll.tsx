@@ -3,7 +3,7 @@ import { useScroll } from '../../hooks/useScroll'
 import { useWindowSize } from '../../hooks/useWindowSize'
 import './Scroll.scss'
 
-export const Scroll = ({ children }: { children: JSX.Element[] }): JSX.Element => {
+export const Scroll = ({ children }: { children: JSX.Element[] }): JSX.Element | null => {
   const size = useWindowSize()
 
   const app = useRef<HTMLDivElement>(null)

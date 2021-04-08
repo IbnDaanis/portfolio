@@ -7,7 +7,7 @@ export const Hero = (): JSX.Element => {
   useEffect(() => {
     const tl = gsap.timeline()
     tl.to('.line', {
-      delay: 5,
+      delay: 1,
       duration: 0.8,
       ease: 'power3.out',
       y: '100%',

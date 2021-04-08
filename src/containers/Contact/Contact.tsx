@@ -90,7 +90,7 @@ export const Contact = (): JSX.Element => {
             <div
               className='button-container'
               data-aos='fade-up'
-              data-aos-offset='250'
+              data-aos-offset='100'
               data-aos-duration='800'
               data-aos-easing='ease-in-out'
             >

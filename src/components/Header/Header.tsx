@@ -19,7 +19,7 @@ export const Header = (): JSX.Element => {
     const tl = gsap.timeline({ onComplete: handleComplete })
 
     tl.to('.navbar-list-item', {
-      delay: 5.5,
+      delay: 6.5,
       duration: 0.8,
       ease: 'power3.out',
       opacity: 1,
