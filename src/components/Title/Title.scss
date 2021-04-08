@@ -29,15 +29,11 @@
   }
 
   .title-line {
-    width: 70%;
+    width: 0;
     height: 2px;
     background: #ffcddd;
     position: absolute;
     right: 0;
     bottom: 0;
-
-    @media (max-width: 600px) {
-      width: 0;
-    }
   }
 }

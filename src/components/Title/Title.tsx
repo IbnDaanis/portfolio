@@ -13,7 +13,7 @@ export const Title = ({ title }: { title: text }): JSX.Element => {
     const titleTl = gsap.timeline({
       scrollTrigger: {
         trigger: `.title-${title.replace(' ', '')}`,
-        start: width < 600 ? 'top 80%' : 'top bottom',
+        start: width < 600 ? 'top 80%' : '50% 90%',
       },
     })
 
@@ -26,7 +26,7 @@ export const Title = ({ title }: { title: text }): JSX.Element => {
     const lineTl = gsap.timeline({
       scrollTrigger: {
         trigger: `.title-line-${title.replace(' ', '')}`,
-        start: width < 600 ? 'top 80%' : 0,
+        start: width < 600 ? 'top 80%' : '50% 90%',
       },
     })
 
