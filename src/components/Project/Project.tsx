@@ -20,7 +20,7 @@ export const Project = ({
       intensity1: 0.1,
       intensity2: 0.1,
       angle2: Math.PI / 2,
-      imagesRatio: 0.5625,
+      imagesRatio: 0.625,
       easing: 'power3.out',
       speedIn: 0.8,
       speedOut: 0.8,
