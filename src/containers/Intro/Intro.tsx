@@ -12,7 +12,7 @@ export const Intro = (): JSX.Element => {
     const handleComplete = (): void => {
       setTimeout(() => {
         document.body.style.overflow = 'unset'
-      }, 4000)
+      }, 1000)
     }
 
     const tl = gsap.timeline({ onComplete: handleComplete })

@@ -1,47 +1,41 @@
-import React, { useEffect, useRef } from 'react'
-import { gsap, ScrollTrigger } from 'gsap/all'
+import React, { MutableRefObject, useEffect, useRef } from 'react'
 import './Title.scss'
+import { gsap, ScrollTrigger } from 'gsap/all'
 import { useWindowSize } from '../../hooks/useWindowSize'
 
-type text = string
+type TText = string
 
-export const Title = ({ title }: { title: text }): JSX.Element => {
+interface IAnimation {
+  [key: string]: number | string
+}
+
+export const Title = ({ title }: { title: TText }): JSX.Element => {
   const { width } = useWindowSize()
 
-  const titleEl = useRef<HTMLHeadingElement>(null)
-  const lineEl = useRef<HTMLDivElement>(null)
+  const titleEl = useRef() as MutableRefObject<HTMLHeadingElement>
+  const lineEl = useRef() as MutableRefObject<HTMLDivElement>
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-
-    if (titleEl.current && lineEl.current) {
-      const titleTl = gsap.timeline({
+    const titleAnimation = (element: HTMLHeadingElement | HTMLDivElement, options: IAnimation) => {
+      gsap.registerPlugin(ScrollTrigger)
+      const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: titleEl.current,
+          trigger: element,
           start: width < 600 ? 'top 80%' : '50% 90%',
         },
       })
-
-      titleTl.to([titleEl.current], {
-        duration: 1,
-        y: 0,
-        ease: 'power3.out',
-      })
-
-      const lineTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: lineEl.current,
-          start: width < 600 ? 'top 80%' : '50% 90%',
-        },
-      })
-
-      lineTl.to([lineEl.current], {
-        delay: -0.8,
-        duration: 1.5,
-        ease: 'power3.out',
-        width: '100%',
+      tl.to(element, {
+        ...options,
       })
     }
+
+    titleAnimation(titleEl.current, { duration: 1, y: 0, ease: 'power3.out' })
+    titleAnimation(lineEl.current, {
+      delay: -0.8,
+      duration: 1.5,
+      ease: 'power3.out',
+      width: '100%',
+    })
   }, [width, title])
 
   return (
