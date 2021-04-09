@@ -27,21 +27,23 @@ export const App = (): JSX.Element => {
     displayApp && console.clear()
   }, [displayApp])
 
+  const [introComplete, setIntroComplete] = useState(false)
+
   return (
     <>
       <Header />
-      <Intro />
+      <Intro setIntroComplete={setIntroComplete} />
       {displayApp ? (
         userAgentMobile ? (
           <>
-            <Hero />
+            <Hero introComplete={introComplete} />
             <About />
             <Projects />
             <Contact />
           </>
         ) : (
           <Scroll>
-            <Hero />
+            <Hero introComplete={introComplete} />
             <About />
             <Projects />
             <Contact />

@@ -3,19 +3,20 @@ import gsap from 'gsap'
 import './Hero.scss'
 import { useScroll } from '../../hooks/useScroll'
 
-export const Hero = (): JSX.Element => {
+export const Hero = ({ introComplete }: { introComplete: boolean }): JSX.Element => {
   const positionY = useScroll()
 
   useEffect(() => {
-    const tl = gsap.timeline()
-    tl.to('.line', {
-      delay: 4.5,
-      duration: 0.8,
-      ease: Expo.easeIn,
-      y: '100%',
-      stagger: { each: 0.4 },
-    })
-  }, [])
+    if (introComplete) {
+      const tl = gsap.timeline()
+      tl.to('.line', {
+        duration: 0.8,
+        ease: Expo.easeIn,
+        y: '100%',
+        stagger: { each: 0.4 },
+      })
+    }
+  }, [introComplete])
 
   return (
     <section id='hero' className='hero'>

@@ -3,13 +3,18 @@ import gsap from 'gsap'
 import './Intro.scss'
 import { Expo } from 'gsap/all'
 
-export const Intro = (): JSX.Element => {
+export const Intro = ({
+  setIntroComplete,
+}: {
+  setIntroComplete: React.Dispatch<React.SetStateAction<boolean>>
+}): JSX.Element => {
   useEffect(() => {
     setTimeout(() => {
       document.body.style.overflow = 'hidden'
     }, 500)
 
     const handleComplete = (): void => {
+      setIntroComplete(true)
       setTimeout(() => {
         document.body.style.overflow = 'unset'
       }, 1000)
@@ -38,7 +43,7 @@ export const Intro = (): JSX.Element => {
       ease: Expo.easeInOut,
       y: '-120%',
     })
-  }, [])
+  }, [setIntroComplete])
 
   return (
     <section className='intro'>
