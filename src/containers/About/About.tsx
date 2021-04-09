@@ -28,8 +28,8 @@ export const About = (): JSX.Element => {
             >
               developers on YouTube,
             </a>{' '}
-            I have learnt so much. I remember once being overwhelmed by HTML and SCSS, now I&#39;m
-            creating this website in React and TypeScript.
+            I have learnt web development from scratch. I remember once being overwhelmed by HTML
+            and SCSS, now I&#39;m creating this website in React and TypeScript.
           </p>
           <p
             className='about-content'
@@ -38,9 +38,9 @@ export const About = (): JSX.Element => {
             data-aos-duration='800'
             data-aos-easing='ease-in-out'
           >
-            With the help of YouTube, Udemy, Scrimba, and many other resources, I have learnt many
-            Web Development technologies. HTML, CSS, SCSS, Styled Components, JavaScript, ES6+,
-            React, Redux, NodeJs, Express and MongoDB, just to name a few.
+            Through YouTube, Udemy, Scrimba, and other resources, I have learnt a number of
+            technologies. HTML, CSS, SCSS, Styled Components, JavaScript, ES6+, React, Redux,
+            NodeJs, Express and MongoDB, just to name a few.
           </p>
           <p
             className='about-content'
@@ -49,9 +49,8 @@ export const About = (): JSX.Element => {
             data-aos-duration='800'
             data-aos-easing='ease-in-out'
           >
-            I&#39;m a quick learner. Eager to find out new things. In fact, the more I learn, the
-            more I realise I don&#39;t know much. I&#39;m never satisfied with mediocre. If I do
-            something, I do it with perfection. Look below.
+            I&#39;m a quick learner and eager to find out new things. I&#39;m never satisfied with
+            mediocre. If I do something, I do it with perfection. Look below.
           </p>
         </div>
       </div>
