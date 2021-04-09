@@ -12,7 +12,7 @@ export const App = (): JSX.Element => {
       setCursorPosition({ pageY: -55, pageX: -55 })
     })
     document.addEventListener('mousemove', event => {
-      setCursorPosition({ pageY: event.clientY - 10, pageX: event.clientX - 10 })
+      setCursorPosition({ pageY: event.clientY - 20, pageX: event.clientX - 20 })
     })
   }, [])
 

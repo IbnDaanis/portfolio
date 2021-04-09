@@ -8,7 +8,7 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: none;
+  cursor: none !important;
 
   &::-moz-selection {
     color: rgb(255, 255, 255);
@@ -61,9 +61,9 @@ ul {
 }
 
 .cursor {
-  width: 20px;
-  height: 20px;
-  border: 1px solid white;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #afafaf;
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
