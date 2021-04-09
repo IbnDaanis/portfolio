@@ -1,26 +1,58 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import './Contact.scss'
 import { Title } from '../../components'
+import './Contact.scss'
 
 export const Contact = (): JSX.Element => {
   useEffect(() => AOS.init({ once: true }), [])
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState(false)
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false)
+  const [showErrorMessage, setShowErrorMessage] = useState(false)
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault()
+    setSubmitting(true)
+    const data = JSON.stringify({ name, email, message })
+
+    fetch('https://formspree.io/f/meqvqvab', {
+      method: 'POST',
+      body: data,
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+      .then(response => {
+        console.log(response)
+        setMessage('')
+        setSubmitting(false)
+        setShowSuccessMessage(true)
+        setTimeout(() => {
+          setShowSuccessMessage(false)
+        }, 5000)
+      })
+      .catch(error => {
+        console.error(error)
+        setSubmitting(false)
+        setError(error)
+        setShowErrorMessage(true)
+        setTimeout(() => {
+          setShowErrorMessage(false)
+        }, 5000)
+      })
+  }
 
   return (
     <section id='contact' className='contact'>
       <div className='container'>
         <Title title='Contact Me' />
         <div className='contact-form-container'>
-          <form
-            className='contact-form'
-            name='contact'
-            method='POST'
-            data-netlify='true'
-            action='/?success=true'
-            id='contact'
-          >
-            <input type='hidden' name='form-name' value='contact' />
+          <form className='contact-form' id='contact' onSubmit={handleSubmit}>
             <p
               className='hello'
               data-aos='fade-up'
@@ -46,6 +78,8 @@ export const Contact = (): JSX.Element => {
                 name='name'
                 className='contact-form-item-input'
                 placeholder='Enter your name here'
+                value={name}
+                onChange={({ target }) => setName(target.value)}
                 required
               />
             </div>
@@ -65,6 +99,8 @@ export const Contact = (): JSX.Element => {
                 name='email'
                 className='contact-form-item-input'
                 placeholder='Enter your email here'
+                value={email}
+                onChange={({ target }) => setEmail(target.value)}
                 required
               />
             </div>
@@ -84,6 +120,8 @@ export const Contact = (): JSX.Element => {
                 name='message'
                 className='contact-form-item-input message'
                 placeholder='Enter your message here'
+                value={message}
+                onChange={({ target }) => setMessage(target.value)}
                 required
               />
             </div>
@@ -94,10 +132,12 @@ export const Contact = (): JSX.Element => {
               data-aos-duration='800'
               data-aos-easing='ease-in-out'
             >
-              <button type='submit' className='contact-form-submit'>
+              <button type='submit' className='contact-form-submit' disabled={submitting}>
                 Send
               </button>
             </div>
+            {showSuccessMessage && <p className='form-message'>Thank you for the message!</p>}
+            {showErrorMessage && <p className='form-message'>{error}</p>}
           </form>
         </div>
       </div>
