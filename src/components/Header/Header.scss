@@ -15,8 +15,10 @@
     transition: 0.2s ease-in-out;
 
     @media (hover: hover) {
-      &:hover {
-        background: hsla(0, 0%, 7%, 0.9);
+      @media (max-width: 1480px) {
+        &:hover {
+          background: hsla(0, 0%, 7%, 0.9);
+        }
       }
     }
 
