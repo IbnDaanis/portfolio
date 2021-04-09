@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { MutableRefObject, useEffect, useRef } from 'react'
 import hoverEffect from 'hover-effect'
 import { gsap, ScrollTrigger } from 'gsap/all'
 import AOS from 'aos'
@@ -30,39 +30,27 @@ export const Project = ({
     })
   }, [image1, image2, title])
 
-  const imageCover1 = useRef<HTMLDivElement>(null)
-  const imageCover2 = useRef<HTMLDivElement>(null)
+  const imageCover1 = useRef() as MutableRefObject<HTMLDivElement>
+  const imageCover2 = useRef() as MutableRefObject<HTMLDivElement>
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-
-    if (imageCover1.current && imageCover2.current) {
-      const imageCover1Tl = gsap.timeline({
+    const titleAnimation = (element: HTMLDivElement) => {
+      gsap.registerPlugin(ScrollTrigger)
+      const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: imageCover1.current,
+          trigger: element,
           start: 'top 80%',
         },
       })
-
-      imageCover1Tl.to([imageCover1.current], {
-        duration: 1.5,
-        y: '-100%',
-        ease: Expo.easeInOut,
-      })
-
-      const imageCover2Tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: imageCover2.current,
-          start: 'top 80%',
-        },
-      })
-
-      imageCover2Tl.to([imageCover2.current], {
-        duration: 1.5,
+      tl.to(element, {
+        duration: 1,
         y: '-100%',
         ease: Expo.easeInOut,
       })
     }
+
+    titleAnimation(imageCover1.current)
+    titleAnimation(imageCover2.current)
   }, [])
 
   return (
