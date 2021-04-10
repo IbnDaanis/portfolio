@@ -11,14 +11,23 @@ export const Contact = (): JSX.Element => {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitting, setSubmitting] = useState(false)
-  const [error, setError] = useState(false)
+  const [error, setError] = useState('')
   const [showSuccessMessage, setShowSuccessMessage] = useState(false)
   const [showErrorMessage, setShowErrorMessage] = useState(false)
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault()
     setSubmitting(true)
+
     const data = JSON.stringify({ name, email, message })
+
+    const handleError = (error: string): void => {
+      setError(error)
+      setShowErrorMessage(true)
+      setTimeout(() => {
+        setShowErrorMessage(false)
+      }, 5000)
+    }
 
     fetch('https://formspree.io/f/meqvqvab', {
       method: 'POST',
@@ -29,21 +38,22 @@ export const Contact = (): JSX.Element => {
     })
       .then(response => {
         console.log(response)
-        setMessage('')
         setSubmitting(false)
-        setShowSuccessMessage(true)
-        setTimeout(() => {
-          setShowSuccessMessage(false)
-        }, 5000)
+        if (response.status === 200) {
+          setMessage('')
+          setShowSuccessMessage(true)
+          setTimeout(() => {
+            setShowSuccessMessage(false)
+          }, 5000)
+          return
+        }
+
+        handleError('There was a problem sending your message.')
       })
       .catch(error => {
         console.error(error)
         setSubmitting(false)
-        setError(error)
-        setShowErrorMessage(true)
-        setTimeout(() => {
-          setShowErrorMessage(false)
-        }, 5000)
+        handleError('There was a problem sending your message.')
       })
   }
 
@@ -136,8 +146,13 @@ export const Contact = (): JSX.Element => {
                 Send
               </button>
             </div>
-            {showSuccessMessage && <p className='form-message'>Thank you for the message!</p>}
-            {showErrorMessage && <p className='form-message'>{error}</p>}
+            <div className='form-message-container'>
+              <p className={`form-message ${showSuccessMessage ? 'visible' : ''}`}>
+                Thank you for the message!
+              </p>
+
+              <p className={`form-message ${showErrorMessage ? 'visible' : ''}`}>{error}</p>
+            </div>{' '}
           </form>
         </div>
       </div>
