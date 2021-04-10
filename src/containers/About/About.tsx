@@ -38,7 +38,7 @@ export const About = (): JSX.Element => {
             data-aos-duration='800'
             data-aos-easing='ease-in-out'
           >
-            Through YouTube, Udemy, Scrimba, and other resources, I have learnt a number of
+            Through YouTube, Udemy, Scrimba, and other resources, I have learnt several
             technologies. HTML, CSS, SCSS, Styled Components, JavaScript, ES6+, React, Redux,
             NodeJs, Express and MongoDB, just to name a few.
           </p>

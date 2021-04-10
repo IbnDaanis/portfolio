@@ -14,7 +14,7 @@ export const projects: IProject[] = [
   {
     title: 'Todoer',
     description1: `Todoer is a clone of the task managing app Todoist. It's used to create projects to organize your daily tasks. You can create an account using your email and password or Google Sign In. I have used Firebase Firestore for the backend which stores user information and data.`,
-    description2: `I have implemented create, read, update and delete features for the tasks. They can be sorted by due date and alphabetically. All tasks can be updated and completed and entire projects can be deleted. I also cloned the Todoist home screen for the landing page.`,
+    description2: `I have implemented create, read, update and delete features for the tasks. They can be sorted by the due date and alphabetically. All tasks can be updated and completed and entire projects can be deleted. I also cloned the Todoist home screen for the landing page.`,
     list1: ['React', 'Redux', 'Firebase', 'React Router'],
     list2: [
       'Styled Components',
@@ -29,8 +29,8 @@ export const projects: IProject[] = [
   },
   {
     title: 'UltraStore',
-    description1: `UltraStore is an E-commerce store which sells tech items. Customers can create an account, add products to the cart, order items and view past orders. All payments are carried out by PayPal and once payment is received, the order will be completed`,
-    description2: `This app also includes several admin features. Admins can add new products to the catalogue and upload custom images for each item. User accounts can be edited and delete. Orders can be viewed and marked as delivered.`,
+    description1: `UltraStore is an E-commerce store that sells tech items. Customers can create an account, add products to the cart, order items and view past orders. All payments are carried out by PayPal and once payment is received, the order will be completed`,
+    description2: `This app also includes several admin features. Admins can add new products to the catalogue and upload custom images for each item. User accounts can be edited and deleted. Orders can be viewed and marked as delivered.`,
     list1: ['React', 'Redux', 'React Router', 'Bootstrap'],
     list2: ['Express', 'MongoDB', 'Mongoose', 'NodeJS'],
     repo: 'https://github.com/IbnDaanis/ultrastore',

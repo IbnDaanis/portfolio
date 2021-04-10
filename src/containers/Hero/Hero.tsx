@@ -23,7 +23,7 @@ export const Hero = ({ introComplete }: { introComplete: boolean }): JSX.Element
       <div className='container'>
         <div className='content'>
           <h1 className='heading' style={{ transform: `translateY(-${positionY * 0.1}px)` }}>
-            Hello, <span>I&#39;m Ikraam</span>
+            <span>I&#39;m Ikraam</span>
             <div className='line'></div>
           </h1>
           <h2 className='sub-heading' style={{ transform: `translateY(-${positionY * 0.08}px)` }}>
