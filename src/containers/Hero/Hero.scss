@@ -1,3 +1,5 @@
+@import '../../styles/scss-utils.scss';
+
 .hero {
   .container {
     display: flex;
@@ -26,13 +28,13 @@
         height: 100%;
         top: 0;
         bottom: 0;
-        background: #151515;
+        background: $dark-black;
       }
 
       .heading {
         font-weight: 600;
         font-size: clamp(2.8rem, calc(40px + 120 * (100vw - 420px) / 1600), 8rem);
-        color: #fff;
+        color: $text-white;
         width: 100%;
         overflow: hidden;
         position: relative;
@@ -50,7 +52,7 @@
         font-weight: 500;
         font-size: clamp(1.8rem, calc(20px + 106 * (100vw - 420px) / 1600), 5rem);
         line-height: 1.2;
-        color: #fff;
+        color: $text-white;
         position: relative;
 
         span {

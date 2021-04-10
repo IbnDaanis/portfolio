@@ -1,3 +1,5 @@
+@import '../../styles/scss-utils.scss';
+
 .app-container {
   position: fixed;
   top: 0;
@@ -5,7 +7,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: #151515;
+  background: $dark-black;
 
   .scroll-container {
     overflow-y: auto;

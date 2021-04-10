@@ -1,3 +1,5 @@
+@import '../../styles/scss-utils.scss';
+
 .contact {
   .container {
     display: flex;
@@ -73,13 +75,13 @@
             font-size: clamp(1.2rem, calc(16px + 10 * (100vw - 420px) / 1600), 2rem);
             font-weight: 500;
             text-align: center;
-            border-bottom: 2px solid #a0a0a0;
+            border-bottom: 2px solid $placeholder;
             transition: 0.2s ease-in-out;
-            color: #a0a0a0;
+            color: $placeholder;
 
             &:focus {
-              border-bottom: 2px solid #ffcddd;
-              color: white;
+              border-bottom: 2px solid $light-pink;
+              color: $text-white;
             }
 
             @media (max-width: 1000px) {
@@ -97,7 +99,7 @@
         }
 
         &-submit {
-          background: #ffcddd;
+          background: $light-pink;
           border: 0;
           border-radius: 50%;
           outline: 0;
@@ -119,7 +121,7 @@
           }
 
           &:active {
-            background: white;
+            background: $text-white;
           }
         }
 

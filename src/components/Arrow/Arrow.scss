@@ -1,11 +1,13 @@
+@import '../../styles/scss-utils.scss';
+
 .arrow-container {
   &:hover {
     .arrow-ring {
-      background: #ffc5c0;
-      border: 2px solid #ffc5c0;
+      background: $arrow-color;
+      border: 2px solid $arrow-color;
 
       .arrow {
-        color: #151515;
+        color: $dark-black;
       }
     }
   }
@@ -18,7 +20,7 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50%;
-    border: 2px solid rgb(231, 231, 231);
+    border: 2px solid $off-white;
     transition: 0.3s ease-in-out;
 
     .arrow {
@@ -27,7 +29,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       height: 130px;
-      color: #ffc5c0;
+      color: $arrow-color;
       transition: 0.3s ease-in-out;
     }
   }

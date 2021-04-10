@@ -1,9 +1,11 @@
+@import '../../styles/scss-utils.scss';
+
 .about {
   .container {
     display: flex;
-    position: relative;
     flex-direction: column;
     justify-content: center;
+    position: relative;
     width: 1240px;
     max-width: 85%;
     margin: 0 auto 8rem;
@@ -14,15 +16,15 @@
 
     .content {
       display: flex;
-      align-items: center;
       flex-direction: column;
+      align-items: center;
       justify-content: center;
 
       .about-content {
         font-weight: 500;
         font-size: clamp(1.8rem, calc(20px + 100 * (40vw - 100px) / 1600), 2.5rem);
         line-height: 1.2;
-        color: #fff;
+        color: $text-white;
         margin-bottom: 4rem;
 
         @media (max-width: 600px) {
@@ -31,7 +33,7 @@
         }
 
         .link {
-          color: #ffc5c0;
+          color: $light-pink;
           font-weight: 500;
         }
       }

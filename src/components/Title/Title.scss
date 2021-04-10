@@ -1,3 +1,5 @@
+@import '../../styles/scss-utils.scss';
+
 .title-container {
   position: relative;
   margin: 8rem auto 8rem;
@@ -8,10 +10,10 @@
   }
 
   .title {
-    font-size: clamp(2rem, calc(40px + 100 * (100vw - 220px) / 1600), 7rem);
+    font-size: clamp(2rem, calc(40px + 100 * (100vw - 220px) / 1600), 10rem);
     text-transform: uppercase;
     line-height: 1;
-    color: #ffcddd;
+    color: $light-pink;
     text-align: center;
     font-weight: 600;
     padding-bottom: 1rem;
@@ -31,7 +33,7 @@
   .title-line {
     width: 0;
     height: 2px;
-    background: #ffcddd;
+    background: $light-pink;
     position: absolute;
     right: 0;
     bottom: 0;

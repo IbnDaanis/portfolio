@@ -1,3 +1,5 @@
+@import '../../styles/scss-utils.scss';
+
 .header {
   position: fixed;
   top: 1%;
@@ -12,12 +14,13 @@
   .navbar {
     border-radius: 5px;
     padding: 0.5rem 1rem;
-    transition: 0.2s ease-in-out;
+    transition: 0.4s ease-in-out;
 
     @media (hover: hover) {
       @media (max-width: 1480px) {
         &:hover {
-          background: hsla(0, 0%, 7%, 0.9);
+          background: $dark-black;
+          opacity: 0.9;
         }
       }
     }
@@ -34,12 +37,12 @@
         font-size: 1.4rem;
         margin-bottom: 4px;
         transition: 0.2s ease-in-out, opacity 0.8s ease-in-out;
-        color: #ffd4e2;
+        color: $light-pink;
         opacity: 0;
 
         @media (hover: hover) {
           &:hover {
-            color: #fff;
+            color: $text-white;
           }
         }
 
