@@ -12,6 +12,7 @@ My Portfolio. An about me section where I briefly talk about myself. Projects se
 - Hover Effect
 - GreenSock GSAP
 - Smooth Scrolling
+- Compiled with Snowpack
 
 ## Preview:
 

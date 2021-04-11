@@ -16,6 +16,8 @@ export const Intro = ({
     const handleComplete = (): void => {
       setIntroComplete(true)
       setTimeout(() => {
+        const cursor = document.querySelector('.cursor') as HTMLDivElement
+        if (cursor) cursor.style.display = 'block'
         document.body.style.overflow = 'unset'
       }, 1000)
     }
