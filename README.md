@@ -1,6 +1,6 @@
 # Portfolio
 
-**Check out** the app [here](https://ikraam.dev/)
+**Check out** my website [here](https://ikraam.dev/)
 
 My Portfolio. An about me section where I briefly talk about myself. Projects section where I display three of my projects including a description, features, tech stack and a link to the repo and live site. A contact form using Netlify Forms.
 
