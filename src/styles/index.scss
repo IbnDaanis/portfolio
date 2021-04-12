@@ -28,12 +28,13 @@ html {
 }
 
 body {
+  position: relative;
   overflow-x: hidden;
   overscroll-behavior-y: none;
-  background: $black;
-  color: $text-white;
-  position: relative;
   -ms-overflow-style: none;
+  color: $text-white;
+  background: $black;
+
   scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
@@ -64,12 +65,12 @@ ul {
 }
 
 .cursor {
+  position: fixed;
+  z-index: 100;
   display: none;
   width: 40px;
   height: 40px;
   border: 1px solid $cursor;
   border-radius: 50%;
-  position: fixed;
   pointer-events: none;
-  z-index: 100;
 }
