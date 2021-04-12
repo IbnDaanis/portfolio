@@ -2,10 +2,10 @@
 
 .about {
   .container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
     width: 1240px;
     max-width: 85%;
     margin: 0 auto 8rem;
@@ -16,16 +16,16 @@
 
     .content {
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      flex-direction: column;
 
       .about-content {
-        font-weight: 500;
-        font-size: clamp(1.8rem, calc(20px + 100 * (40vw - 100px) / 1600), 2.5rem);
-        line-height: 1.2;
-        color: $text-white;
         margin-bottom: 4rem;
+        color: $text-white;
+        font-size: clamp(1.8rem, calc(20px + 100 * (40vw - 100px) / 1600), 2.5rem);
+        font-weight: 500;
+        line-height: 1.2;
 
         @media (max-width: 600px) {
           margin-bottom: 2rem;
