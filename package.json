@@ -1,7 +1,6 @@
 {
   "name": "portfolio",
   "description": "**Check out** the app [here]()",
-  "version": "1.0.0",
   "main": "snowpack.config.js",
   "repository": {
     "type": "git",
