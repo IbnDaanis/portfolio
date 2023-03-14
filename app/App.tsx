@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
+import { isMobile } from "react-device-detect";
 import { Header, Scroll } from "./components";
 import { About, Contact, Hero, Intro, Projects } from "./containers";
 import "./styles/index.scss";
-import { userAgentMobile } from "./utils/userAgentMobile";
 
 export const App = () => {
   const [cursorPosition, setCursorPosition] = useState({
@@ -38,7 +38,7 @@ export const App = () => {
       <Header />
       <Intro setIntroComplete={setIntroComplete} />
       {displayApp ? (
-        userAgentMobile() ? (
+        isMobile ? (
           <>
             <Hero introComplete={introComplete} />
             <About />
@@ -54,7 +54,7 @@ export const App = () => {
           </Scroll>
         )
       ) : null}
-      {!userAgentMobile() && (
+      {!isMobile && (
         <div className="cursor" style={{ top: pageY, left: pageX }}></div>
       )}
     </>
