@@ -13,15 +13,17 @@ export const App = () => {
   const { pageY, pageX } = cursorPosition;
 
   useEffect(() => {
-    document.addEventListener("mouseleave", () => {
-      setCursorPosition({ pageY: -100, pageX: -100 });
-    });
-    document.addEventListener("mousemove", event => {
-      setCursorPosition({
-        pageY: event.clientY - 20,
-        pageX: event.clientX - 20
+    if (typeof window !== "undefined") {
+      document.addEventListener("mouseleave", () => {
+        setCursorPosition({ pageY: -100, pageX: -100 });
       });
-    });
+      document.addEventListener("mousemove", event => {
+        setCursorPosition({
+          pageY: event.clientY - 20,
+          pageX: event.clientX - 20
+        });
+      });
+    }
   }, []);
 
   const [displayApp, setDisplayApp] = useState(false);
