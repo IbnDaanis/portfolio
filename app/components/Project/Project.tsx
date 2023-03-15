@@ -1,3 +1,4 @@
+"use client";
 import { Expo } from "gsap";
 import { gsap, ScrollTrigger } from "gsap/all";
 import hoverEffect from "hover-effect";

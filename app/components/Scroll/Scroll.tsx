@@ -1,34 +1,41 @@
-import React, { useEffect, useRef } from 'react'
-import { useScroll } from '../../hooks/useScroll'
-import { useWindowSize } from '../../hooks/useWindowSize'
-import './Scroll.scss'
+"use client";
+import React, { useEffect, useRef } from "react";
+import { useScroll } from "../../hooks/useScroll";
+import { useWindowSize } from "../../hooks/useWindowSize";
+import "./Scroll.scss";
 
-export const Scroll = ({ children }: { children: JSX.Element[] }): JSX.Element | null => {
-  const size = useWindowSize()
+export const Scroll = ({
+  children
+}: {
+  children: JSX.Element[];
+}): JSX.Element | null => {
+  const size = useWindowSize();
 
-  const app = useRef<HTMLDivElement>(null)
-  const scrollContainer = useRef<HTMLDivElement>(null)
+  const app = useRef<HTMLDivElement>(null);
+  const scrollContainer = useRef<HTMLDivElement>(null);
 
   const setBodyHeight = () => {
-    document.body.style.height = `${scrollContainer?.current?.getBoundingClientRect().height}px`
-  }
+    document.body.style.height = `${
+      scrollContainer?.current?.getBoundingClientRect().height
+    }px`;
+  };
 
   useEffect((): void => {
-    setBodyHeight()
-  }, [size])
+    setBodyHeight();
+  }, [size]);
 
-  const positionY = useScroll()
+  const positionY = useScroll();
 
   useEffect(() => {
     if (scrollContainer.current)
-      scrollContainer.current.style.transform = `translate3d(0, -${positionY}px, 0)`
-  }, [positionY])
+      scrollContainer.current.style.transform = `translate3d(0, -${positionY}px, 0)`;
+  }, [positionY]);
 
   return (
-    <div className='app-container' ref={app}>
-      <div className='scroll-container' ref={scrollContainer}>
+    <div className="app-container" ref={app}>
+      <div className="scroll-container" ref={scrollContainer}>
         {children}
       </div>
     </div>
-  )
-}
+  );
+};

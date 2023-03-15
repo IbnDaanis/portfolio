@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import { Header, Scroll } from "./components";
 import { About, Contact, Hero, Intro, Projects } from "./containers";
-import "./styles/index.scss";
 
 export const App = () => {
   const [cursorPosition, setCursorPosition] = useState({
@@ -13,17 +12,15 @@ export const App = () => {
   const { pageY, pageX } = cursorPosition;
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      document.addEventListener("mouseleave", () => {
-        setCursorPosition({ pageY: -100, pageX: -100 });
+    document.addEventListener("mouseleave", () => {
+      setCursorPosition({ pageY: -100, pageX: -100 });
+    });
+    document.addEventListener("mousemove", event => {
+      setCursorPosition({
+        pageY: event.clientY - 20,
+        pageX: event.clientX - 20
       });
-      document.addEventListener("mousemove", event => {
-        setCursorPosition({
-          pageY: event.clientY - 20,
-          pageX: event.clientX - 20
-        });
-      });
-    }
+    });
   }, []);
 
   const [displayApp, setDisplayApp] = useState(false);
