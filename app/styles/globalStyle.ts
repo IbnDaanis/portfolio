@@ -27,15 +27,15 @@ export const GlobalStyle = createGlobalStyle`
     ${raleway.style}
 
     &::-moz-selection {
-      color:${theme.$textWhite}; 
-      background: $highlight;
-      -webkit-text-fill-color:${theme.$textWhite}; 
+      color: ${theme.$textWhite}; 
+      background: ${theme.$highlight};
+      -webkit-text-fill-color: ${theme.$textWhite}; 
     }
 
     &::selection {
-      color:${theme.$textWhite}; 
-      background: $highlight;
-      -webkit-text-fill-color:${theme.$textWhite}; 
+      color: ${theme.$textWhite}; 
+      background: ${theme.$highlight};
+      -webkit-text-fill-color: ${theme.$textWhite}; 
     }
   }
 
@@ -48,10 +48,10 @@ export const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     overscroll-behavior-y: none;
     -ms-overflow-style: none;
-    color:${theme.$textWhite}; 
+    color: ${theme.$textWhite}; 
     background: ${theme.$black};
-
     scrollbar-width: none;
+    
     &::-webkit-scrollbar {
       display: none;
     }
@@ -86,7 +86,7 @@ export const GlobalStyle = createGlobalStyle`
     display: none;
     width: 40px;
     height: 40px;
-    border: 1px solid $cursor;
+    border: 1px solid ${theme.$cursor};
     border-radius: 50%;
     pointer-events: none;
   }

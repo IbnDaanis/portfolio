@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import { Header, Scroll } from "./components";
 import { About, Contact, Hero, Intro, Projects } from "./containers";
+import "./styles/globalStyle";
 
 export const App = () => {
   const [cursorPosition, setCursorPosition] = useState({
