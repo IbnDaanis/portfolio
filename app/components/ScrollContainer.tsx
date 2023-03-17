@@ -12,7 +12,6 @@ const AppContainer = styled.div`
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: $dark-black;
 `;
 
 interface ScrollProps {

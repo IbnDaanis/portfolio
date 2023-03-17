@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { isMobile } from "react-device-detect";
-import { Header } from "./components";
+import { Header } from "./components/Header";
 import { Cursor } from "./components/Cursor";
 import { Show } from "./components/Show";
 import { ScrollContainer } from "./components/ScrollContainer";
