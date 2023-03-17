@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Title } from "../../components/Title/Title";
+import { Title } from "../../components/Title";
 import "./Contact.scss";
 
 export const Contact = () => {

@@ -1,4 +1,4 @@
-import { Title } from "../../components/Title/Title";
+import { Title } from "../../components/Title";
 import "./About.scss";
 
 export const About = (): JSX.Element => {

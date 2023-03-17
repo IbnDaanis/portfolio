@@ -1,5 +1,5 @@
 import { Project } from "../../components/Project/Project";
-import { Title } from "../../components/Title/Title";
+import { Title } from "../../components/Title";
 import { projects } from "../../data/projects";
 import "./Projects.scss";
 
