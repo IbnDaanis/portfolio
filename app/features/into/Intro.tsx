@@ -1,14 +1,13 @@
-"use client";
-import React, { useEffect } from "react";
 import gsap from "gsap";
-import "./Intro.scss";
 import { Expo } from "gsap/all";
+import React, { useEffect } from "react";
+import "./Intro.scss";
 
-export const Intro = ({
-  setIntroComplete
-}: {
+interface Props {
   setIntroComplete: React.Dispatch<React.SetStateAction<boolean>>;
-}): JSX.Element => {
+}
+
+export const Intro = ({ setIntroComplete }: Props): JSX.Element => {
   useEffect(() => {
     setTimeout(() => {
       document.body.style.overflow = "hidden";

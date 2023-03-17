@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Title } from "../../components";
+import { Title } from "../../components/Title/Title";
 import "./Contact.scss";
 
-export const Contact = (): JSX.Element => {
+export const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");

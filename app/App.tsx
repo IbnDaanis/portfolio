@@ -2,11 +2,15 @@
 
 import { useState } from "react";
 import { isMobile } from "react-device-detect";
-import { Header } from "./components/Header";
 import { Cursor } from "./components/Cursor";
-import { Show } from "./components/Show";
+import { Header } from "./components/Header";
 import { ScrollContainer } from "./components/ScrollContainer";
-import { About, Contact, Hero, Intro, Projects } from "./containers";
+import { Show } from "./components/Show";
+import { About } from "./features/about/About";
+import { Contact } from "./features/contact/Contact";
+import { Hero } from "./features/hero/Hero";
+import { Intro } from "./features/into/Intro";
+import { Projects } from "./features/work/Projects";
 
 export const App = () => {
   const [displayApp, setDisplayApp] = useState(false);

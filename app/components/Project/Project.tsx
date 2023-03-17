@@ -1,11 +1,12 @@
 "use client";
+
 import { Expo } from "gsap";
 import { gsap, ScrollTrigger } from "gsap/all";
 import hoverEffect from "hover-effect";
 import { MutableRefObject, useEffect, useRef } from "react";
-import { Arrow } from "../";
 import { GithubIcon } from "../../assets";
 import { IProject } from "../../data/projects";
+import { Arrow } from "../Arrow/Arrow";
 import { Show } from "../Show";
 import "./Project.scss";
 import { ProjectImage } from "./ProjectImage";
