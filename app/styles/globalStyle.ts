@@ -1,7 +1,7 @@
 import { Raleway } from "@next/font/google";
 import { createGlobalStyle } from "styled-components";
 
-const theme = {
+export const theme = {
   $textWhite: "#fff",
   $lightPink: "#ffcddd",
   $arrowColor: "#ffc5c0",
@@ -78,16 +78,5 @@ export const GlobalStyle = createGlobalStyle`
 
   .hide {
     display: none !important;
-  }
-
-  .cursor {
-    position: fixed;
-    z-index: 100;
-    display: none;
-    width: 40px;
-    height: 40px;
-    border: 1px solid ${theme.$cursor};
-    border-radius: 50%;
-    pointer-events: none;
   }
 `;

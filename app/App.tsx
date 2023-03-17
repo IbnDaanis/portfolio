@@ -1,32 +1,17 @@
 "use client";
-import { useEffect, useState } from "react";
+
+import { useState } from "react";
 import { isMobile } from "react-device-detect";
 import { Header, Scroll } from "./components";
+import { Cursor } from "./components/Cursor";
 import { About, Contact, Hero, Intro, Projects } from "./containers";
 import "./styles/globalStyle";
 
 export const App = () => {
-  const [cursorPosition, setCursorPosition] = useState({
-    pageY: -100,
-    pageX: -100
-  });
-  const { pageY, pageX } = cursorPosition;
-
-  useEffect(() => {
-    document.addEventListener("mouseleave", () => {
-      setCursorPosition({ pageY: -100, pageX: -100 });
-    });
-    document.addEventListener("mousemove", event => {
-      setCursorPosition({
-        pageY: event.clientY - 20,
-        pageX: event.clientX - 20
-      });
-    });
-  }, []);
-
   const [displayApp, setDisplayApp] = useState(false);
 
   setTimeout(() => {
+    if (typeof window === "undefined") return;
     setDisplayApp && setDisplayApp(true);
     document.body.style.background = "#151515";
   }, 1550);
@@ -54,9 +39,7 @@ export const App = () => {
           </Scroll>
         )
       ) : null}
-      {!isMobile && (
-        <div className="cursor" style={{ top: pageY, left: pageX }}></div>
-      )}
+      <Cursor />
     </>
   );
 };
