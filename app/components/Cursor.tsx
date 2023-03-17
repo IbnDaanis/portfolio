@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import styled from "styled-components";
 import { theme } from "../styles/globalStyle";
-import { Show } from "./misc/Show";
+import { Show } from "./Show";
 
 const Element = styled.div`
   position: fixed;

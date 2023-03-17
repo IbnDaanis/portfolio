@@ -6,7 +6,7 @@ import { MutableRefObject, useEffect, useRef } from "react";
 import { Arrow } from "../";
 import { GithubIcon } from "../../assets";
 import { IProject } from "../../data/projects";
-import { Show } from "../misc/Show";
+import { Show } from "../Show";
 import "./Project.scss";
 import { ProjectImage } from "./ProjectImage";
 
