@@ -1,4 +1,4 @@
-import { Raleway } from "@next/font/google";
+import { Raleway } from "next/font/google";
 import { createGlobalStyle } from "styled-components";
 
 export const theme = {
