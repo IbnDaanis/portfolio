@@ -1,19 +1,19 @@
-import gsap from "gsap";
-import { Expo } from "gsap/all";
+import gsap, { Expo } from "gsap";
 import React, { useEffect } from "react";
-import "./Intro.scss";
+import styled from "styled-components";
 
 interface Props {
   setIntroComplete: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const Intro = ({ setIntroComplete }: Props): JSX.Element => {
+/** Intro welcome screen. Shown for a few seconds. */
+export const Intro = ({ setIntroComplete }: Props) => {
   useEffect(() => {
     setTimeout(() => {
       document.body.style.overflow = "hidden";
     }, 500);
 
-    const handleComplete = (): void => {
+    const handleComplete = () => {
       setIntroComplete(true);
       setTimeout(() => {
         const cursor = document.querySelector(".cursor") as HTMLDivElement;
@@ -48,8 +48,8 @@ export const Intro = ({ setIntroComplete }: Props): JSX.Element => {
   }, [setIntroComplete]);
 
   return (
-    <section className="intro">
-      <h1 className="welcome">
+    <Container>
+      <Welcome className="welcome">
         <span className="letter">W</span>
         <span className="letter">e</span>
         <span className="letter">l</span>
@@ -57,8 +57,36 @@ export const Intro = ({ setIntroComplete }: Props): JSX.Element => {
         <span className="letter">o</span>
         <span className="letter">m</span>
         <span className="letter">e</span>
-      </h1>
-      <div className="back"></div>
-    </section>
+      </Welcome>
+      <Back className="back" />
+    </Container>
   );
 };
+
+const Container = styled.section`
+  position: fixed;
+  height: 100vh;
+  z-index: 10000;
+  pointer-events: none;
+`;
+
+const Welcome = styled.h1`
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 12000;
+  transform: translate(-50%, -100%);
+  font-size: clamp(2rem, calc(40px + 100 * (100vw - 220px) / 1600), 7rem);
+  font-weight: 600;
+  opacity: 0;
+`;
+
+const Back = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11000;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+`;
