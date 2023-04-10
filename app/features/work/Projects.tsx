@@ -1,4 +1,4 @@
-import { Project } from "../../components/Project/Project";
+import { Project } from "../project/Project";
 import { Title } from "../../components/Title";
 import { projects } from "../../data/projects";
 import "./Projects.scss";
