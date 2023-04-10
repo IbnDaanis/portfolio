@@ -9,7 +9,7 @@ import { GithubIcon } from "../../assets";
 import { Show } from "../../components/Show";
 import { IProject } from "../../data/projects";
 import { theme } from "../../styles/globalStyle";
-import { Arrow } from "../work/Arrow";
+import { Arrow } from "./Arrow";
 import { ProjectImage } from "./ProjectImage";
 
 interface Props {
