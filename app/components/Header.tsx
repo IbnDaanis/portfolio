@@ -36,30 +36,18 @@ export const Header = () => {
 
   return (
     <HeaderContainer>
-      <Navbar className="navbar">
-        <LinksList className="navbar-list">
-          <LinksItem
-            className="navbar-list-item"
-            onClick={handleClick}
-            data-id="about"
-          >
+      <Navbar>
+        <LinksList>
+          <LinksItem onClick={handleClick} data-id="about">
             About
           </LinksItem>
-          <LinksItem
-            className="navbar-list-item"
-            onClick={handleClick}
-            data-id="projects"
-          >
+          <LinksItem onClick={handleClick} data-id="projects">
             Projects
           </LinksItem>
-          <LinksItem
-            className="navbar-list-item"
-            onClick={handleClick}
-            data-id="contact"
-          >
+          <LinksItem onClick={handleClick} data-id="contact">
             Contact
           </LinksItem>
-          <LinksItem className="navbar-list-item">
+          <LinksItem>
             <a
               href="https://github.com/IbnDaanis"
               target="blank"
@@ -113,13 +101,13 @@ const LinksList = styled.ul`
 const LinksItem = styled.li`
   margin-bottom: 4px;
   font-size: 1.4rem;
-  color: $light-pink;
+  color: ${theme.$lightPink};
   transition: 0.2s ease-in-out, opacity 0.8s ease-in-out;
   opacity: 0;
 
   @media (hover: hover) {
     &:hover {
-      color: $text-white;
+      color: ${theme.$textWhite};
     }
   }
 

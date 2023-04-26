@@ -31,7 +31,7 @@ export const Cursor = () => {
 
   return (
     <Show when={!isMobile}>
-      <Element className="cursor" style={{ top: pageY, left: pageX }} />
+      <Element id="cursor" style={{ top: pageY, left: pageX }} />
     </Show>
   );
 };

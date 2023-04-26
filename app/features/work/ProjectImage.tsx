@@ -17,29 +17,23 @@ export const ProjectImage = ({
 }: Props) => {
   return (
     <>
-      <div className="project-image-mobile-container cover-top">
+      <div>
         <Image
           src={image1}
           alt="Screenshot of the project"
           width={window.innerWidth}
           height={((window.innerWidth * 0.85) / 16) * 10}
         />
-        <div
-          className="project-image-mobile-container-cover "
-          ref={imageCover1}
-        ></div>
+        <div ref={imageCover1}></div>
       </div>
-      <div className="project-image-mobile-container">
+      <div>
         <Image
           src={image2}
           alt="Screenshot of the project"
           width={window.innerWidth}
           height={((window.innerWidth * 0.85) / 16) * 10}
         />
-        <div
-          className="project-image-mobile-container-cover"
-          ref={imageCover2}
-        ></div>
+        <div ref={imageCover2}></div>
       </div>
     </>
   );

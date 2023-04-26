@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import { Title } from "../../components/Title";
 import { projects } from "../../data/projects";
-import { Project } from "./Project";
+import { ProjectItem } from "./ProjectItem";
 
 /** Displays the my projects. */
 export const Projects = () => {
   return (
-    <Container id="projects" className="projects">
+    <Container id="projects">
       <Title title="My Projects" />
       <ProjectsContainer>
         {projects.map(project => (
-          <Project key={project.title} project={project} />
+          <ProjectItem key={project.title} project={project} />
         ))}
       </ProjectsContainer>
     </Container>

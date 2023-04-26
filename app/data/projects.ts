@@ -1,4 +1,4 @@
-export interface IProject {
+export interface Project {
   title: string;
   description1: string;
   description2: string;
@@ -10,7 +10,7 @@ export interface IProject {
   image2: string;
 }
 
-export const projects: IProject[] = [
+export const projects: Project[] = [
   {
     title: "Todoer",
     description1: `Todoer is a clone of the task managing app Todoist. It's used to create projects to organize your daily tasks. You can create an account using your email and password or Google Sign In. I have used Firebase Firestore for the backend which stores user information and data.`,

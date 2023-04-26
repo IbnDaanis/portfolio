@@ -7,16 +7,16 @@ import { MutableRefObject, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { GithubIcon } from "../../assets";
 import { Show } from "../../components/Show";
-import { IProject } from "../../data/projects";
+import { Project } from "../../data/projects";
 import { theme } from "../../styles/globalStyle";
 import { Arrow } from "./Arrow";
 import { ProjectImage } from "./ProjectImage";
 
 interface Props {
-  project: IProject;
+  project: Project;
 }
 
-export const Project = ({
+export const ProjectItem = ({
   project: {
     title,
     description1,
@@ -71,7 +71,7 @@ export const Project = ({
   }, []);
 
   return (
-    <Container className="project">
+    <Container>
       <Details>
         <DetailsContainer>
           <DetailsTitle>{title}</DetailsTitle>
@@ -239,13 +239,13 @@ const FeaturesList = styled.ul`
 const Github = styled.a`
   display: inline-flex;
   align-items: center;
-  fill: $light-pink;
+  fill: ${theme.$lightPink};
 
   span {
     margin-right: 0.5rem;
     font-size: 1.8rem;
     font-weight: 300;
-    color: $light-pink;
+    color: ${theme.$lightPink};
     transition: 0.4s ease-in-out 0.2s;
 
     @media (max-width: 600px) {
@@ -260,7 +260,7 @@ const Github = styled.a`
 
   &:hover {
     span {
-      color: $text-white;
+      color: ${theme.$textWhite};
     }
     svg {
       transform: scale(1.3);

@@ -14,7 +14,6 @@ export const About = () => {
             href="https://www.youtube.com/channel/UCSKr_gILoWAETdYpAoCxB0w/channels?view=56&shelf_id=0"
             target="blank"
             rel="noreferrer"
-            className="link"
           >
             developers on YouTube,
           </Link>{" "}

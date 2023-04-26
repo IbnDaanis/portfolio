@@ -7,7 +7,7 @@ export const Arrow = () => {
   return (
     <ArrowContainer>
       <ArrowRing>
-        <ArrowIcon className="arrow" />
+        <ArrowIcon />
       </ArrowRing>
     </ArrowContainer>
   );
@@ -43,7 +43,7 @@ const ArrowRing = styled.div`
     }
   }
 
-  .arrow {
+  svg {
     position: absolute;
     top: 50%;
     left: 50%;
