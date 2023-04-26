@@ -6,6 +6,7 @@ import { GlobalStyle } from "./styles/globalStyle";
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <link rel="icon" href="/images/favicon.ico" />
       <GlobalStyle />
       <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
