@@ -1,4 +1,6 @@
 "use client";
+
+import { Analytics } from "@vercel/analytics/react";
 import { ReactNode } from "react";
 import StyledComponentsRegistry from "./registry";
 import { GlobalStyle } from "./styles/globalStyle";
@@ -11,6 +13,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
+      <Analytics />
     </html>
   );
 }
