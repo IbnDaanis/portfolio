@@ -102,7 +102,9 @@ const LinksItem = styled.li`
   margin-bottom: 4px;
   font-size: 1.4rem;
   color: ${theme.$lightPink};
-  transition: 0.2s ease-in-out, opacity 0.8s ease-in-out;
+  transition:
+    0.2s ease-in-out,
+    opacity 0.8s ease-in-out;
   opacity: 0;
 
   @media (hover: hover) {
