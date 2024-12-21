@@ -1,11 +1,11 @@
 {
   "name": "portfolio",
-  "description": "**Check out** the app [here]()",
+  "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IbnDaanis/portfoli.git"
+    "url": "git+https://github.com/ikraamdaanis/portfolio-old.git"
   },
-  "homepage": "https://github.com/IbnDaanis/portfoli#readme",
+  "homepage": "https://github.com/ikraamdaanis/portfolio-old#readme",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -37,6 +37,6 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/IbnDaanis/portfoli/issues"
+    "url": "https://github.com/ikraamdaanis/portfolio-old/issues"
   }
 }
