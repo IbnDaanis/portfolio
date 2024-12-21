@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { MutableRefObject } from "react";
+import { RefObject } from "react";
 
 interface Props {
   image1: string;
   image2: string;
-  imageCover1: MutableRefObject<HTMLDivElement>;
-  imageCover2: MutableRefObject<HTMLDivElement>;
+  imageCover1: RefObject<HTMLDivElement | null>;
+  imageCover2: RefObject<HTMLDivElement | null>;
 }
 
 /** Images for the Projects */

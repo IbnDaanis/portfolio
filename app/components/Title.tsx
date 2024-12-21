@@ -1,5 +1,5 @@
 import { gsap, ScrollTrigger } from "gsap/all";
-import { MutableRefObject, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { useWindowSize } from "../hooks/useWindowSize";
 import { theme } from "../styles/globalStyle";
@@ -16,8 +16,8 @@ interface Props {
 export const Title = ({ title }: Props) => {
   const { width } = useWindowSize();
 
-  const titleEl = useRef() as MutableRefObject<HTMLHeadingElement>;
-  const lineEl = useRef() as MutableRefObject<HTMLDivElement>;
+  const titleEl = useRef<HTMLHeadingElement>(null);
+  const lineEl = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function titleAnimation(
@@ -35,6 +35,8 @@ export const Title = ({ title }: Props) => {
         ...options
       });
     }
+
+    if (!titleEl.current || !lineEl.current) return;
 
     titleAnimation(titleEl.current, { duration: 1, y: 0, ease: "power3.out" });
     titleAnimation(lineEl.current, {

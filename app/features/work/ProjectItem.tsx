@@ -3,7 +3,7 @@
 import { Expo } from "gsap";
 import { gsap, ScrollTrigger } from "gsap/all";
 import hoverEffect from "hover-effect";
-import { MutableRefObject, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { GithubIcon } from "../../assets";
 import { Show } from "../../components/Show";
@@ -47,8 +47,8 @@ export const ProjectItem = ({
     });
   }, [image1, image2, title]);
 
-  const imageCover1 = useRef() as MutableRefObject<HTMLDivElement>;
-  const imageCover2 = useRef() as MutableRefObject<HTMLDivElement>;
+  const imageCover1 = useRef<HTMLDivElement>(null);
+  const imageCover2 = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const titleAnimation = (element: HTMLDivElement) => {
@@ -65,6 +65,8 @@ export const ProjectItem = ({
         ease: Expo.easeInOut
       });
     };
+
+    if (!imageCover1.current || !imageCover2.current) return;
 
     titleAnimation(imageCover1.current);
     titleAnimation(imageCover2.current);
