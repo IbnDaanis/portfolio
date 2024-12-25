@@ -76,7 +76,7 @@ const Container = styled.div`
 const TitleHeading = styled.h2`
   padding-bottom: 1rem;
   transform: translateY(100%);
-  font-size: clamp(2rem, calc(40px + 100 * (100vw - 220px) / 1600), 6rem);
+  font-size: clamp(2rem, calc(40px + 100 * (100vw - 220px) / 1600), 10rem);
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;

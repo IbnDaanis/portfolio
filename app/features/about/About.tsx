@@ -60,7 +60,7 @@ const Content = styled.div`
 const AboutContent = styled.p`
   margin-bottom: 4rem;
   color: ${theme.$textWhite};
-  font-size: clamp(1.8rem, calc(20px + 100 * (40vw - 100px) / 1600), 2rem);
+  font-size: clamp(1.8rem, calc(20px + 100 * (40vw - 100px) / 1600), 2.5rem);
   font-weight: 500;
   line-height: 1.2;
 
