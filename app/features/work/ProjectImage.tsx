@@ -21,7 +21,7 @@ export const ProjectImage = ({
         <Image
           src={image1}
           alt="Screenshot of the project"
-          width={window.innerWidth}
+          width={window.innerWidth * 0.85}
           height={((window.innerWidth * 0.85) / 16) * 10}
         />
         <div ref={imageCover1}></div>
@@ -30,7 +30,7 @@ export const ProjectImage = ({
         <Image
           src={image2}
           alt="Screenshot of the project"
-          width={window.innerWidth}
+          width={window.innerWidth * 0.85}
           height={((window.innerWidth * 0.85) / 16) * 10}
         />
         <div ref={imageCover2}></div>

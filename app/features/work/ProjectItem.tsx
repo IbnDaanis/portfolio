@@ -285,10 +285,8 @@ const ImageContainer = styled.div`
     order: 2;
   }
 
-  &-large {
-    @media (max-width: 600px) {
-      display: none;
-    }
+  @media (max-width: 600px) {
+    display: none;
   }
 
   @media (max-width: 950px) {
